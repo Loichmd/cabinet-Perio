@@ -1,0 +1,1127 @@
+*, ::before, ::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: "SfProDisplayRegular"; src: url("./Font/SFPRODISPLAYREGULAR.OTF");
+	/*
+	font-family: "SfProDisplayBold"; font-weight: bold; src: url("./Font/SFPRODISPLAYBOLD.OTF");
+	font-family: "SfProDisplayItalic"; font-weight: italic ; src: url("./Font/SFPRODISPLAYLIGHTITALIC.OTF");
+	*/
+}
+
+
+
+
+body{
+	background: #002a3a;
+	font-family: "SfProDisplayRegular", Arial, Helvetica, sans-serif;
+	height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+	cursor:url('./curseur.cur'), pointer;
+}
+
+p{
+	color: #002a3a;
+	font-size:18px;
+}
+
+.textVert{
+	color:#008aae;
+}
+
+.texteBlanc{
+	color:#fff;
+}
+
+.texteCentre{
+	text-align:center;
+}
+
+
+h1{
+	font-family: "SfProDisplayRegular", sans-serif;
+	font-size: 50px;
+	color: #fff;
+}
+
+h2{
+	color:#002a3a;
+	font-size:40px;
+	text-align: center;
+}
+
+
+h3{
+	font-size:22px;
+	text-decoration: bold;
+}
+
+
+.fondBleu{
+	background-color: 002a3a;
+	padding:80px 120px;
+}
+
+
+
+/* Première partie lors de l'entrée  */
+
+
+
+.container-first{
+background-color: #002a3a;
+height:100vh;
+overflow:hidden;
+}
+
+
+.logo{
+	position:relative;
+	opacity: 1;
+	padding-top:3%;
+	padding-left:50px;
+	height:150px;
+	width:230px;
+}
+
+
+
+.cercle-3{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border: solid 6px #fff;
+	height:300px;
+	width:300px;
+	border-radius: 50%;
+	margin:0 auto;
+	margin-top:7%;
+}
+
+
+.animation-cercle{
+	animation: animateCircle 1.5s linear infinite;
+}
+
+@keyframes animateCircle {
+	0%{
+		opacity: 1;
+		transform: scale(1.0)
+	}
+
+	50%{
+		opacity: 0.5;
+		transform: scale(0.9)
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1.0)
+	}
+
+}
+
+
+
+.circle-2{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:250px;
+	width:250px;
+	background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
+	border-radius: 50%;
+}
+
+.circle-2 p{
+	color:#fff;
+}
+
+
+
+
+.reseaux-sociaux{
+	height:100px;
+	width:200px;
+	color:#fff;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	margin:0 auto;
+	padding-top:25vh;
+	position:relative;
+}
+
+
+
+
+
+.titre-debut{
+	font-size: 50px;
+	color: #002a3a;
+	font-family: "SfProDisplayRegular", sans-serif;
+}
+
+
+.titre-debut span{
+	position: relative;
+}
+
+
+.circle{
+	height: 200px;
+	width:200px;
+	border-radius:50%;
+	background: #002a3a;
+	border: solid 2px #33dddd;
+	cursor:pointer;
+	padding: 85px 5px 0px 5px;
+	text-align:center;
+	color:#f1f1f1;
+	z-index:100;
+	margin:0 auto;
+	margin-top: 7%;
+	animation: animate 1.5s linear infinite;
+}
+
+
+.circle:hover{
+	
+	background: #faf9fe;
+	border: solid 2px #33dddd;
+	color:#002a3a;
+
+}
+
+
+@keyframes animate {
+	0%{
+		box-shadow: 0 0 0 0 rgba(0,206, 209, 0.7);
+	}
+	40%{
+		box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
+	}
+	80%{
+		box-shadow: 0 0 0 50px rgba(0,206, 209, 0);
+	}
+	100%{
+		box-shadow: 0 0 0 60px rgba(0,206, 209, 0);
+	}
+
+}
+
+/*					A RETIRER 
+
+
+				.specialite{
+					color: #002a3a;
+					margin-top: 10%;
+					position: relative;
+
+				}
+
+
+				.spe1{
+					position: relative;
+					margin-top:-20px;
+					opacity:1;
+				}
+
+				.spe2{
+					position: relative;
+					margin-top:-20px;
+				}
+
+
+				.spe3{
+					position: relative;
+					margin-top:-20px;
+				}
+
+				.spe4{
+					position: relative;
+					margin-top:-20px;
+				}
+
+				.spe5{
+					position: relative;
+					margin-top:-20px;
+				}
+
+*/
+
+
+
+/* Video Bienvenue au Cabinet */
+
+
+.messageBienvenue h1{
+	color:#fff;
+}
+
+
+.messageBienvenue{
+	visibility: hidden;
+	position:absolute;
+}
+
+
+.messageBienvenueActive{
+	z-index: 1;
+	position:absolute;
+	margin:0 auto;
+	top:40%;
+	align-items: center;
+	display: flex;
+	opacity:0;
+	left:27%;
+}
+
+
+/* 
+.videoBienvenue{
+	visibility: hidden;
+	z-index: 1;
+	position:absolute;
+	
+}
+
+.videoBienvenueActive{
+	visibility: visible;
+	z-index: 1;
+	position:relative;
+	margin:0 auto;
+	top:40%;
+	align-items: center;
+	display: flex;
+}
+*/
+
+
+
+
+
+.vert{
+	height: 200px;
+	width:100%;
+	background-color: #002a3a;
+	opacity: 1;
+	}
+
+
+	.welcome-cabinet
+	{
+		font-size:50px;
+		color: #002a3a;
+		text-align:center;
+		padding:80px 30px;
+	}
+
+	.welcome-cabinet span{
+		position:relative;
+		color: #002a3a;
+	}
+
+
+
+
+
+/* Partie 2 */
+
+
+	/* Video */
+
+		.video{
+			width:100%;
+			background:#f1f1f1;
+			visibility: hidden;
+			z-index:2;
+		}
+
+		.video.visible{
+			visibility: visible;
+		}
+
+
+
+
+	/* Header */
+
+	/* Navbar */
+		.navbar{
+			position:fixed;
+			width:100%;
+			opacity:0;
+			height: 70px;
+			top:0;
+			left:0;
+			background:transparent;
+		}
+
+		.stickyin{
+			background-color: #002a3a;
+			animation: navbaropacityin 0.5s linear;
+		}
+
+		@keyframes navbaropacityin {
+			0%{
+				opacity: 0;
+			}
+			
+			100%{
+				opacity: 1;
+			}
+		}
+		
+
+		.stickyout{
+			background:transparent
+		}
+
+		@keyframes navbaropacityout {
+			0%{
+				opacity: 1;
+			}
+			
+			100%{
+				opacity: 0;
+			}
+		}
+
+
+
+		.navbar img{
+			padding: 10px 0px 0px 20px;
+		}
+
+
+		.traduction{
+			text-align:right;
+			color:#fff;
+			margin: -30px 30px 25px 0;
+			font-size:15px;
+		}
+
+		.traduction:hover{
+			text-decoration: underline;
+			cursor:pointer;
+		}
+
+		
+
+
+
+
+
+
+
+
+
+/* Les Traitements */
+
+	/* 3 types de traitement */
+
+
+		.traitements{
+			width:100%;
+			padding: 80px 200px;
+			background-color: #fff;
+		}
+
+		.h2Traitements{
+			padding: 0px 0px 40px 0px;
+			font-size:20px;
+			visibility: hidden;
+			text-align:center;
+			color:#002a3a;
+		}
+
+
+
+		.traitementFdBlanc{
+			margin-top:0px;
+			padding:50px 0px;
+			color: grey;
+			text-align:center;
+		}
+
+
+/*
+
+		.childTraitements{
+			padding:70px 20px;
+			text-align:center;
+			vertical-align: top;
+			visibility:visible;
+		}
+
+
+
+
+		.childTraitements:nth-child(1){
+			position: relative;
+			left:-600px;
+			visibility: visible;
+		}
+
+		.childTraitements:nth-child(2){
+			position: relative;
+			bottom: -300px;;
+			visibility: visible;
+		}
+
+
+		.childTraitements:nth-child(3){
+			position: relative;
+			left: 800px;;
+			visibility: visible;
+		}
+
+
+
+
+		.childTraitements p{
+			text-align:center;
+		} 
+
+*/	
+
+
+	/* Traintement - deuxième partie (fond blanc) */
+
+		
+
+
+
+	
+
+
+/* Containers-Maladie-Parondotale */	
+
+	/* Titre */	
+
+		.MaladieParodontale{
+			background-color: #002a3a;
+		}
+
+		.h2Blanc{
+			color:#fff;
+			font-size:40px;
+			text-align: center;
+			padding: 50px 0px;
+		}
+
+
+	/* Texte explicatif */
+
+		.texteBleuFdBlanc{
+			text-align:center;
+			background-color: #fff;
+			padding:100px 150px;
+		}
+
+
+		.texteVertFdBlanc{
+			text-align:center;
+			background-color: #fff;
+			padding:100px 150px;
+			color: #008aae;
+		}
+
+
+
+	/* Tbl avec type de traitement Maladies Parodontales */
+
+		.TableWidth100{
+			width:100%;
+			margin-top:-5px;
+			background-color: #fff;
+		}
+
+		.tdBorderTextAlign{
+			text-align: center;
+			border:2px solid #fff;
+			padding:60px 40px;
+			background-color:#faf9fe;
+		}
+
+		
+		.fdRoseTxtBleu{
+			padding:60px 120px;
+			text-align: center;
+			background-color: #faf9fe ;
+		}
+
+
+
+
+/* 
+	###############################
+			Implants dentaires
+	###############################
+*/
+
+		/* Titre implants dentaires */
+
+		.ImplantsDentaire{
+			background-color: #008aae ;
+		}
+
+
+
+
+
+
+.EquipeAVotreEcoute{
+	background-color: #fff;
+}
+
+
+.h2Bleu{
+	padding: 60px 80px 20px 80px;
+}
+
+.TxtGris{
+	color: grey;
+	text-align:center;
+	padding: 0px 300px 60px 300px;
+}
+
+
+/* Equipe */
+	/* SVG */
+
+
+.tailleSVG{
+	height:300px;
+	width:300px;
+	margin:0 auto;
+}
+
+
+.dessinSVG{
+border: solid 10px red;
+
+}
+
+
+.dessinSVG:hover{
+	border: solid 10px blue;
+	background-image: url("https://interactive-examples.mdn.mozilla.net/media/examples/lizard.png") ;
+	}
+
+
+
+
+
+
+
+
+/* Partie SVG */
+
+.svg{
+	width:100%;
+	height: 1000px;
+	margin-left:280px;
+}
+
+#equipe{
+	filter: grayscale(0.8);
+}
+
+#Fond{
+	filter: grayscale(0.8);
+}
+
+
+#Nom-5{
+	filter: grayscale(1);
+}
+
+#Nom-5:hover{
+	fill:#002A3A;
+	filter: grayscale(0);
+	cursor:pointer;
+}
+
+
+#Nom-4{
+	filter: grayscale(1);
+}
+
+#Nom-4:hover{
+	fill:#002A3A;
+	filter: grayscale(0);
+	cursor:pointer;
+}
+
+
+#Nom-3{
+	filter: grayscale(1);
+}
+
+#Nom-3:hover{
+	fill:#002A3A;
+	filter: grayscale(0);
+	cursor:pointer;
+}
+
+
+#Nom-2{
+	filter: grayscale(1);
+}
+
+#Nom-2:hover{
+	fill:#002A3A;
+	filter: grayscale(0);
+	cursor:pointer;
+}
+
+
+#Nom-1{
+	filter: grayscale(1);
+}
+
+
+#Nom-1:hover{
+	fill:#002A3A;
+	filter: grayscale(0);
+	cursor:pointer;
+}
+
+
+
+
+#Nom-5:hover .Nom-5-Span{
+	visibility: visible;
+}
+
+
+title{
+	background-color: black;
+	font-size:18px;
+}
+
+
+/* 
+	###############################
+			Photo praticien individuelle
+	###############################
+*/
+
+
+.jMalet{
+	background-image: url('./Equipe/6.jpg');
+	background-size:cover;
+	height:434px;
+	border:solid 10px #fff;
+	/* width:100%; */
+}
+
+.jMaletHoverBulle1{
+	background-image: url('./Equipe/7.jpg');
+}
+
+.jMaletHoverBulle2{
+	background-image: url('./Equipe/6-hover.jpg');
+}
+
+/*
+#jMalet:hover{
+	background-image: url('./Equipe/6-hover.jpg');
+}
+*/
+
+#dNisand{
+	background-image: url('./Equipe/7.jpg');
+	background-size:cover;
+	height:434px; /* (document.body.clientHeight)/3 */
+	/* width:100%; ((document.body.clientWidth)/3) - 10 */
+}
+
+#dNisand:hover{
+	background-image: url('./Equipe/7-hover.jpg');
+}
+
+#Lafont{
+	background-image: url('./Equipe/9.jpg');
+	background-size:cover;
+	height:434px;
+	/* width:100%; */
+}
+
+#Lafont:hover{
+	background-image: url('./Equipe/9-hover.jpg');
+}
+
+
+
+
+/*
+.paragraphePraticien{
+	opacity: 0; 
+	top:-20;
+	position: relative;
+	visibility: hidden;
+}
+
+.paragraphePraticien p{
+	color:#fff;
+	text-align:center;
+}
+
+
+.paragraphePraticien h3{
+	color:#fff;
+	text-align:center;
+}
+*/
+
+/* Praticien Dr Malet */
+		.paragraphePraticienMalet{
+			opacity: 0; 
+			top:187;
+			position: relative;
+			text-align: center;
+			color:#fff;
+			height:80px;
+			width:100%;
+			background: rgb(0,42,58);
+			background: linear-gradient(0deg, rgba(0,42,58,1) 0%, rgba(0,42,58,1) 100%); 
+		}
+
+		.paragraphePraticienMalet p{
+			color:#fff;
+		}
+
+/*
+		.blackItem{
+			height:80px;
+			width:100%;
+			position:relative;
+			top: 157;
+			background-color: red;
+		}
+*/
+
+/* Praticien Dr Nisand */
+		.paragraphePraticienNisand{
+			opacity: 0; 
+			top:-20;
+			position: relative;
+			text-align: center;
+			color:#fff;
+		}
+
+		.paragraphePraticienNisand p{
+			color:#fff;
+		}
+
+/* Praticien Dr Nisand */
+		.paragraphePraticienLafont{
+			opacity: 0; 
+			top:-20;
+			position: relative;
+			text-align: center;
+			color:#fff;
+		}
+
+		.paragraphePraticienLafont p{
+			color:#fff;
+		}
+
+
+
+		
+
+		.TexteDrMalet{
+			color:#fff;
+			text-align: center;
+			opacity: 0;
+		}
+
+		.TexteDrMalet p{
+			color:#fff;
+		}
+
+		.rondPraticien{
+			height:20px;
+			width:20px;
+			margin:10px;
+			border-radius:50%;
+			background-color: #fff;
+		}
+
+
+
+.p-H3-visible{
+	visibility: visible !important;
+}
+
+/*
+0%{
+	box-shadow: 0 0 0 0 rgba(0,206, 209, 0.7);
+}
+40%{
+	box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
+}
+80%{
+	box-shadow: 0 0 0 50px rgba(0,206, 209, 0);
+}
+100%{
+	box-shadow: 0 0 0 60px rgba(0,206, 209, 0);
+}
+*/
+
+
+/* 
+#######################
+	Pop-UP
+#######################
+*/
+
+
+	/* Premiere PopUp */
+		#myBtn{
+			color:#008aae;
+			float:right;
+			cursor: pointer;
+			font-size:13px;
+			border-radius: 50%;
+			border: solid 1px #008aae;
+			height:20px;
+			width:20px;
+			margin-top:-40px;
+			margin-right:-25px;
+		}
+
+		#myBtn:hover{
+			box-shadow: 1px 1px 10px rgba(0,206, 209, 0.7);
+		}
+
+		.modal {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Sit on top */
+			padding-top: 20%; /* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		
+		/* Modal Content */
+		.modal-content {
+			background-color: #fff;
+			margin: auto;
+			padding: 20px 80px;
+			border: 1px solid #002a3a;
+			width: 80%;
+		}
+		
+		/* The Close Button */
+		.close {
+			color: 008aae;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			margin-right: -70px;
+			margin-top: -20px;
+		}
+		
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+
+
+	/* Deuxième PopUp */
+
+		#myBtn-2{
+			color:grey;
+			cursor: pointer;
+			font-size:13px;
+			height:20px;
+			width:20px;
+			margin-top:-40px;
+			margin:15px auto -15px;
+			border-radius: 50%;
+			border: solid 1px grey;
+			/*
+			float:right;
+
+			margin-right:-25px;
+			*/
+		}
+
+		#myBtn-2:hover{
+			/* box-shadow: 1px 1px 10px rgba(0,206, 209, 0.7); */
+		}
+
+		.modal-2 {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Sit on top */
+			padding-top: 20%; /* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		
+		/* Modal Content */
+		.modal-content-2 {
+			background-color: #fff;
+			margin: auto;
+			padding: 20px 80px;
+			width: 50%;
+			box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
+		}
+		
+		/* The Close Button */
+		.close-2 {
+			color: 008aae;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			margin-right: -70px;
+			margin-top: -20px;
+		}
+		
+		.close-2:hover,
+		.close-2:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+
+
+
+
+
+
+/* 
+#######################
+	Footer
+#######################
+*/
+
+footer{
+	height:200px;
+	width:100%;
+	background-color:#002a3a ;
+}
+
+
+
+
+/* 
+#######################
+	Personnalisation de l'info bulle dnas le SVG
+#######################
+*/
+
+.tippy-box {
+	background-color: #002a3a !important;
+}
+
+.tippy-arrow {
+	background-color: #002a3a !important;
+}
+
+
+
+
+
+
+/*
+##########################
+		Accordéon
+##########################
+*/
+
+.bgAccordeon{
+	background-color: #fff;;
+}
+
+.active:after {
+	content: "\2212";
+  }
+  
+  .panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	text-align:left;
+  
+  }
+
+/* Bleu Clair */
+			.accordionBleuClair {
+			background-color: #008aae;
+			color: #fff;
+			cursor: pointer;
+			padding: 50px 20px;
+			width: 100%;
+			border: none;
+			text-align: center;
+			outline: none;
+			font-size: 40px;
+			transition: 0.4s;
+			}
+
+			.active, .accordionBleuClair:hover {
+			/*background-color: #F5A623;*/
+			text-decoration: underline;
+			transition: text-decoration 0.2s ease-out;
+			}
+
+			.accordionBleuClair:after {
+			content: '\002B';
+			color: #fff;
+			font-weight: bold;
+			float: right;
+			}
+
+/* Bleu Fonce */
+			.accordionBleuFonce {
+				background-color: #002a3a;
+				color: #fff;
+				cursor: pointer;
+				padding: 50px 20px;
+				width: 100%;
+				border: none;
+				text-align: center;
+				outline: none;
+				font-size: 40px;
+				transition: 0.4s;
+			}
+			
+			.active, .accordionBleuFonce:hover {
+				text-decoration: underline;
+				transition: all .5s ease-in-out;
+			}
+			
+			.accordionBleuFonce:after {
+				content: '\002B';
+				color: #fff;
+				font-weight: bold;
+				float: right;
+			}
+
+
