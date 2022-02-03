@@ -21,7 +21,7 @@ body{
 	height: 100vh;
 	overflow-x: hidden;
 	position: relative;
-	cursor:url('./curseur.cur'), pointer;
+	cursor:url('./Logo_picto.cur'), pointer;
 }
 
 p{
@@ -45,7 +45,9 @@ p{
 h1{
 	font-family: "SfProDisplayRegular", sans-serif;
 	font-size: 50px;
-	color: #fff;
+	color: #002a3a;
+	text-align:center;
+	padding:0px 0px 40px 0px;
 }
 
 h2{
@@ -56,7 +58,6 @@ h2{
 
 
 h3{
-	font-size:22px;
 	text-decoration: bold;
 }
 
@@ -67,25 +68,52 @@ h3{
 }
 
 
+/* 
+	###############################
+			Chargement de la page
+	###############################  
+*/
 
-/* Première partie lors de l'entrée  */
 
-
-
-.container-first{
-background-color: #002a3a;
-height:100vh;
-overflow:hidden;
+.container-logo-accueil{
+	height:20vh;
+	width:100vw;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+	border: Opx solid #fff;
 }
-
 
 .logo{
 	position:relative;
 	opacity: 1;
-	padding-top:3%;
-	padding-left:50px;
+	padding-top:20px;
+	padding-left:30px;
 	height:150px;
 	width:230px;
+}
+
+
+
+.traductionAccueil{
+	color:#FFF;
+	margin-right:30px;
+	position:relative;
+}
+
+.traductionAccueil:hover{
+	text-decoration:underline;
+}
+
+
+
+.container-circle{
+	height:65vh;
+	width:100vw;
+	border: 0px solid #fff;
+	display: flex;
+	align-items:center;
+	justify-content: center;
 }
 
 
@@ -98,8 +126,6 @@ overflow:hidden;
 	height:300px;
 	width:300px;
 	border-radius: 50%;
-	margin:0 auto;
-	margin-top:7%;
 }
 
 
@@ -142,6 +168,11 @@ overflow:hidden;
 
 
 
+.container-reseaux{
+	height:15vh;
+	width:100vw;
+	border: 0px solid #fff;
+}
 
 .reseaux-sociaux{
 	height:100px;
@@ -151,9 +182,75 @@ overflow:hidden;
 	justify-content: space-around;
 	align-items: center;
 	margin:0 auto;
-	padding-top:25vh;
 	position:relative;
 }
+
+
+
+
+/* 
+	###############################
+			Message de Bienvenue
+	###############################  
+*/
+
+
+
+.FontMessageBienvenue{
+	font-family: "SfProDisplayRegular", sans-serif;
+	font-size: 50px !important;
+	color: #fff !important;
+}
+
+
+.messageBienvenue{
+	visibility: hidden;
+}
+
+.messageBienvenueActive{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity:0;
+}
+
+
+
+/*
+	###############################
+			Video de présentation du cabinet
+	###############################
+*/
+
+.video{
+	width:100%;
+	background:#f1f1f1;
+	visibility: hidden;
+	z-index:2;
+}
+
+.video.visible{
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Première partie lors de l'entrée  */
+
+
+
+
+
+
 
 
 
@@ -213,47 +310,6 @@ overflow:hidden;
 
 }
 
-/*					A RETIRER 
-
-
-				.specialite{
-					color: #002a3a;
-					margin-top: 10%;
-					position: relative;
-
-				}
-
-
-				.spe1{
-					position: relative;
-					margin-top:-20px;
-					opacity:1;
-				}
-
-				.spe2{
-					position: relative;
-					margin-top:-20px;
-				}
-
-
-				.spe3{
-					position: relative;
-					margin-top:-20px;
-				}
-
-				.spe4{
-					position: relative;
-					margin-top:-20px;
-				}
-
-				.spe5{
-					position: relative;
-					margin-top:-20px;
-				}
-
-*/
-
-
 
 /* Video Bienvenue au Cabinet */
 
@@ -279,28 +335,6 @@ overflow:hidden;
 	opacity:0;
 	left:27%;
 }
-
-
-/* 
-.videoBienvenue{
-	visibility: hidden;
-	z-index: 1;
-	position:absolute;
-	
-}
-
-.videoBienvenueActive{
-	visibility: visible;
-	z-index: 1;
-	position:relative;
-	margin:0 auto;
-	top:40%;
-	align-items: center;
-	display: flex;
-}
-*/
-
-
 
 
 
@@ -425,14 +459,14 @@ overflow:hidden;
 	/* 3 types de traitement */
 
 
-		.traitements{
+		.h1BienvenuePerio{
 			width:100%;
 			padding: 80px 200px;
 			background-color: #fff;
 		}
 
 		.h2Traitements{
-			padding: 0px 0px 40px 0px;
+			padding: 50px 0px 10px 0px;
 			font-size:20px;
 			visibility: hidden;
 			text-align:center;
@@ -714,7 +748,8 @@ title{
 
 
 .jMalet{
-	background-image: url('./Equipe/6.jpg');
+	/* background-image: url('./Equipe/6.jpg');*/
+	background-image: url('https://raw.githubusercontent.com/Loichmd/cabinet-perio/main/equipe/6.jpg');
 	background-size:cover;
 	height:434px;
 	border:solid 10px #fff;
@@ -1051,17 +1086,164 @@ footer{
 ##########################
 		Accordéon
 ##########################
+
+
+					.bgAccordeon{
+						background-color: #fff;;
+					}
+
+					.active:after {
+						content: "\2212";
+					}
+					
+					.panel {
+						padding: 0 18px;
+						background-color: white;
+						max-height: 0;
+						overflow: hidden;
+						transition: max-height 0.3s ease-out;
+						text-align:left;
+					
+					}
+
+					/* Bleu Clair *//*
+								.accordionBleuClair {
+								/*background-color: #008aae;*//*
+								color: #fff;
+								cursor: pointer;
+								padding: 50px 20px;
+								width: 100%;
+								border: none;
+								text-align: center;
+								outline: none;
+								font-size: 30px;
+								transition: 0.4s;
+								}
+
+								.active, .accordionBleuClair:hover {
+								/*background-color: #F5A623;*//*
+								text-decoration: underline;
+								transition: text-decoration 0.2s ease-out;
+								}
+
+								.accordionBleuClair:after {
+								content: '\002B';
+								color: #fff;
+								font-weight: bold;
+								float: right;
+								}
+
+					/* Bleu Fonce */
+					/*
+								.accordionBleuFonce {
+									/*background-color: #002a3a;*//*
+									color: #fff;
+									cursor: pointer;
+									padding: 50px 20px;
+									width: 100%;
+									border: none;
+									text-align: center;
+									outline: none;
+									font-size: 30px;
+									transition: 0.4s;
+								}
+								
+								.active, .accordionBleuFonce:hover {
+									text-decoration: underline;
+									transition: all .5s ease-in-out;
+								}
+								
+								.accordionBleuFonce:after {
+									content: '\002B';
+									color: #fff;
+									font-weight: bold;
+									float: right;
+								}
+
+
+					#MaladieParodontale{
+						background-color:#002a39 ;
+					}
+
+					#ImplantsDentaires{
+						background-color:#003e53 ;
+					}
+
+					#TraitementViseeEsthetique{
+						background-color:#00546d ;
+					}
+
+
+					#ReconstructionOsseuse{
+						background-color:#016b89 ;
+					}
+
+
+
+					#AccompagnementOrthodontique{
+						background-color:#0084a5 ;
+					}
+
+
+					#ExtractionDent{
+						background-color: #008aae;
+					}
+
 */
 
-.bgAccordeon{
-	background-color: #fff;;
+
+
+
+
+
+/*
+##########################
+		Accordéon V2
+##########################
+*/
+
+
+.container-accordeon{
+	background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
+	font-size:30px;
 }
 
-.active:after {
+.container-accordeon h3{
+	color:#fff;
+	padding:10px;
+	text-align:center
+}
+
+.accordeon {
+
+	color: #fff;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+  }
+  
+  .active, .accordeon:hover {
+	text-decoration: underline;
+  }
+  
+  .accordeon:after {
+	content: '\002B';
+	color: #fff;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .active:after {
 	content: "\2212";
   }
   
-  .panel {
+  .panel2 {
 	padding: 0 18px;
 	background-color: white;
 	max-height: 0;
@@ -1071,57 +1253,65 @@ footer{
   
   }
 
-/* Bleu Clair */
-			.accordionBleuClair {
-			background-color: #008aae;
-			color: #fff;
-			cursor: pointer;
-			padding: 50px 20px;
-			width: 100%;
-			border: none;
-			text-align: center;
-			outline: none;
-			font-size: 40px;
-			transition: 0.4s;
-			}
-
-			.active, .accordionBleuClair:hover {
-			/*background-color: #F5A623;*/
-			text-decoration: underline;
-			transition: text-decoration 0.2s ease-out;
-			}
-
-			.accordionBleuClair:after {
-			content: '\002B';
-			color: #fff;
-			font-weight: bold;
-			float: right;
-			}
-
-/* Bleu Fonce */
-			.accordionBleuFonce {
-				background-color: #002a3a;
-				color: #fff;
-				cursor: pointer;
-				padding: 50px 20px;
-				width: 100%;
-				border: none;
-				text-align: center;
-				outline: none;
-				font-size: 40px;
-				transition: 0.4s;
-			}
-			
-			.active, .accordionBleuFonce:hover {
-				text-decoration: underline;
-				transition: all .5s ease-in-out;
-			}
-			
-			.accordionBleuFonce:after {
-				content: '\002B';
-				color: #fff;
-				font-weight: bold;
-				float: right;
-			}
 
 
+
+
+/*
+	#################################
+		Media Queries
+	#################################
+*/
+
+
+/* A partie de 900 de large */
+
+@media screen and (max-width:900px){
+	.container-logo-accueil{
+		height:13vh;
+	}
+
+	.logo{
+		height:100px;
+		width:180px;
+		padding-left:0px;
+	}
+}
+
+
+
+
+
+@media screen and (max-width:500px){
+
+	.container-logo-accueil{
+		height:10vh;
+	}
+
+	.container-logo-accueil p{
+		font-size:15px;
+	}
+
+
+	.logo{
+		height:80px;
+		width:150px;
+	}
+
+
+	.container-circle{
+		height:75vh;
+	}
+
+	.cercle-3{
+		height:350px;
+		width:350px;
+	}
+
+	.cercle-2{
+		height:300px;
+		width:300px;
+	}
+	
+	
+}

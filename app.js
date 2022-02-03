@@ -31,6 +31,7 @@ window.addEventListener('scroll', noScroll);
 	const logo1JS = document.querySelector('.logo');
 	const RS = document.querySelectorAll('.reseaux-sociaux .fa');
 	const circle2 = document.querySelector('.cercle-3');
+	const texteTraductionAccueil = document.querySelector('.traductionAccueil');
 	//const logo2JS = document.querySelector('.logo-Room');
 	const menuFixed = document.querySelector('.navbar');
 
@@ -76,58 +77,32 @@ window.addEventListener('scroll', noScroll);
 
 window.addEventListener('load', () => {
 
-	// On déclare la variable 
+	// On déclare la variable GSAP
 	const TL10 = gsap.timeline({pause:true});
 
 	
 
-	// On 
+	// On lance l'animation du début de la page
 	TL10
 	.staggerFrom(logo1JS, 1, {top: -100, opacity: 0, ease: "power2.out"}, 2)
 	.staggerFrom(RS, 1, {top: -100, opacity: 0, ease: "power2.out"}, 0.3)	
-	.staggerFrom(circle2, 1, {scale:0.5, opacity:0, ease: "power2.out"}, 0.3)
+	.staggerFrom(circle2, 1, {scale:0.5, opacity:0, ease: "power2.out"}, 0.3, '-=1.5')
 	//.staggerFrom(cercle, 2, {opacity:0, ease: "power2.out"}, 0.5, '+=0.2')
-
-	function TimerEffetPulsation(){
-		setTimeout(effetPulsation, 3800)
-	}
-
+	.staggerFrom(texteTraductionAccueil, 1, {right:-80, opacity:0, ease: "power2.out"}, 0.3, '-=1')
+	
+	
 	function effetPulsation(){
 		circle2.classList.add('animation-cercle');
 	}
 
+	function TimerEffetPulsation(){
+		setTimeout(effetPulsation, 2000)
+	}
+	
 
+	// On lance les fonctions
 	TL10.play();
-
-
 	TimerEffetPulsation();
-
-
-
-/*  ==> Anciennement les spécialités qui apparaissaient sous le cercle
-			const TL11 = gsap.timeline({pause:true, repeat:-1, delay: 2});
-			TL11
-
-			// .staggerFrom(spec1, {keyframes:[{duration: 0.8, bottom: -20, opacity: 0, ease: "power2.out"}, {duration: 0.8, top: -20, opacity: 0, ease: "power2.out"}]})
-			.staggerFrom(spec1, 0.8, {bottom: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			.staggerTo(spec1, 0.8, {top: -20, opacity: 0, ease: "power2.out"}, 0.5)
-
-			.staggerFrom(spec2, 0.8, {bottom: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			.staggerTo(spec2, 0.8, {top: -20, opacity: 0, ease: "power2.out"}, 0.5)
-
-			.staggerFrom(spec3, 0.8, {bottom: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			.staggerTo(spec3, 0.8, {top: -20, opacity: 0, ease: "power2.out"}, 0.5)
-
-			.staggerFrom(spec4, 0.8, {bottom: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			.staggerTo(spec4, 0.8, {top: -20, opacity: 0, ease: "power2.out"}, 0.5)
-
-			.staggerFrom(spec5, 0.8, {bottom: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			.staggerTo(spec5, 0.8, {top: -20, opacity: 0, ease: "power2.out"}, 0.5)
-			
-			
-			TL11.play()
-
-	*/
 
 
 })
@@ -154,6 +129,7 @@ circle2.addEventListener('click', () =>{
 	const TL2 = gsap.timeline({pause:true});
 	
 	const messageBienvenueJS = document.querySelector('.messageBienvenue');
+	
 
 	
 	function msgbienvenue(){
@@ -173,56 +149,17 @@ circle2.addEventListener('click', () =>{
 		.staggerTo(circle2, 1, {scale:0, ease:"power4.easeOut"}, 0.5) // le cercle disparait
 
 		.staggerTo(logo1JS, 1, {top: -100, opacity: 0, ease: "power2.out"}, 2, '-=1')
+		.staggerTo(texteTraductionAccueil, 1, {right:-80, opacity:0, ease: "power2.out"}, 0.3, '-=0.5')
 		.staggerTo(RS, 1, {top: -100, opacity: 0, ease: "power2.out"}, 0.3,'-=1')
 
 		.staggerTo(messageBienvenueJS, 1 ,{opacity:1, ease:Linear.easeNone}, 0.3)
 		.staggerTo(messageBienvenueJS, 1 ,{opacity:0, ease:Linear.easeNone}, 0.3, '+=3')
 
 
-		//.staggerTo(titreSpans, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.5, '-=1') // Enleve "La Room Perio"
-
-		
-
-/*
-		.staggerTo(partVert, 1, {scale:1, opacity: 1, ease:"power4.easeOut" }, 1) // Affiche le fond du head
-		.staggerTo(specAll, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.5) // on enlève toutes les spécialités
-		.staggerTo(logoJS, 1, {opacity:1, ease:"power4.easeOut"}, 1) // Affiche la barre où il y a le logo
-		.staggerFrom(welcomeCabinet, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.4) // On affiche le "Bienvenue au cabinet Perio"
-*/
+	
 
 	// On joue TL2 
 	TL2.play();
-
-	
-
-/*
-
-
-			VIDEO INDIQUANT LA BIENVENUE
-
-
-*/
-		// On affiche la vidéo de bienvenue
-
-		/*
-			const videoBienvenueJS = document.querySelector('.videoBienvenue');
-
-			function suiteTraitementVideo(){
-				videoBienvenueJS.classList.remove('videoBienvenue');
-				videoBienvenueJS.classList.add('videoBienvenueActive');
-				videoBienvenueJS.play();
-			}
-
-			// on attend 2 seconde avant de jouer "Suite Traitement"
-		function videoBienvenueDisplay(){
-			setTimeout(suiteTraitementVideo, 2000)
-		}
-		videoBienvenueDisplay();
-		
-
-
-*/
-
 
 				
 		
@@ -230,16 +167,20 @@ circle2.addEventListener('click', () =>{
 
 		// Suite des animations (video de présentation)
 			function VideoPresentation(){
+				
 				containerFirst.remove(); // On suprime tout ce qu'il y avait dans la première partie pour pouvoir cliquer
 				videoExp.classList.add('visible') // On ajoute la classe "Visible" à la vidéo car elle n'est pas visible au lancement de la page
-				//menuFixed.style.opacity="1"
-				//videoBienvenueJS.classList.remove('videoBienvenueActive');
-				//videoBienvenueJS.classList.add('videoBienvenue');
+				
+
+				// On retirer l'interdiction du scroll
+					window.removeEventListener('scroll', noScroll);
+
+
 				// On fait une animation d'agrandissement de la vidéo 
-				const TL3 = gsap.timeline({pause:true, delay:0.6})
-				TL3
-				.staggerFrom(videoExp, 1, {scale:0.8, opacity:0, ease:"power4easeOut"}, 1)
-				.staggerTo(menuFixed, 1, {opacity:1, ease:"power4easeOut"}, 0.3)
+					const TL3 = gsap.timeline({pause:true, delay:0.6})
+					TL3
+					.staggerFrom(videoExp, 1, {scale:1, opacity:0, ease:"power4easeOut"}, 1)
+					.staggerTo(menuFixed, 1, {opacity:1, ease:"power4easeOut"}, 0.3)
 			}
 
 		// on attend 2 seconde avant de jouer "Suite Traitement"
@@ -250,8 +191,7 @@ circle2.addEventListener('click', () =>{
 
 
 
-	// On retirer l'interdiction du scroll
-	window.removeEventListener('scroll', noScroll);
+	
 
 
 })
@@ -728,6 +668,31 @@ var u;
 
 for (i = 0; i < accordeonBleuFonce.length; i++) {
 	accordeonBleuFonce[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+
+
+
+/*
+##########################
+		Accordéon
+##########################
+*/
+
+
+var acc = document.getElementsByClassName("accordeon");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
