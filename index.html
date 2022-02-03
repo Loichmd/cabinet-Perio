@@ -16,109 +16,68 @@
 			Chargement de la page
 	###############################
 -->
+
 <div class="container-first">
-	<!-- 
-		<h1 class="titre-debut"><span>La </span><span>Room </span><br/><span style="font-size:150px">Perio </span></h1> 
-		<div class="circle"> Entrez dans la room </div> 
-	-->
 
-	<div class="titre-debut" id="flex-logo">
-		<img src="./logo-cabinet-perio-Room-perio.svg" alt="" class="logo">
-		<p class="traduction ">Fr / En</p>
-	</div>
 
-	<div class="cercle-3">
-		<div class="circle-2">
-			<p>Entrez dans la room</p>
+		<div class="container-logo-accueil">
+			<img src="./logo-cabinet-perio-Room-perio.svg" alt="" class="logo">
+			<p style="color:#fff;"></p>
+			<p class="traductionAccueil">Fr / En</p>
 		</div>
-	</div>
-
-	<div class="reseaux-sociaux">
-		<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-		<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-		<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-		<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
 
 
-	</div>
+		<div class="container-circle">
+			<div class="cercle-3">
+				<div class="circle-2">
+					<p>Entrez dans la room</p>
+				</div>
+			</div>
+		</div>
 
+
+		<div class="container-reseaux">
+			<div class="reseaux-sociaux">
+				<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+			</div>
+		</div>
 </div>
 
 
+<!-- 
+	###############################
+			Message de bienvenue
+	###############################
+-->
+
+
 <div class="messageBienvenue">
-	<h1><span>Bienvenue</span> <span>/</span> <span> Welcome</span> <span> Perio</span></h1>
+	<p class="FontMessageBienvenue"><span>Bienvenue</span> <span>au</span> <span> cabinet</span> <span> Perio</span></p>
 
 </div>
 	
 
-<!--
-	<div class="specialite">
-		<ul class="spe1">Maladies parondontales</ul>
-		<ul class="spe2">Implants dentaires</ul>
-		<ul class="spe3">Traitements à visée esthétique</ul>
-		<ul class="spe4">Reconstruction osseuse</ul>
-		<ul class="spe5">Exaction des dents incluses</ul>
-	</div>
--->
+
 
 
 
 
 <!-- 
-<div class="vert"> 
-	<p class="welcome-cabinet" > <span>Bienvenue</span> <span>au</span> <span>cabinet</span> <span>Perio</span> </p>
-</div>
-
--->
-
-<!-- 
 	###############################
-			Suite chargement
+			Video de présentation du cabinet
 	###############################
 -->
 
-	<!-- Entête 
-
-		
-
-		<div class="vert"> 
-			<p class="welcome-cabinet" > <span>Bienvenue</span> <span>au</span> <span>cabinet</span> <span>Perio</span> </p>
-		</div>
-		
-	-->
-
-<!-- 
-	###############################
-			Video Bienvenue au Cabinet
-	###############################
--->
-
-
-	<!-- 
-		<video class="videoBienvenue" src="./Intro-cabinet.mp4" muted width="427" height="200"></video>
-		-->
-
-<!-- 
-
-	###############################
-			Site
-	###############################
-
--->
 
 	<!-- Vidéo -->
 		<div class="video">
-			<!-- 
-			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/AevLIWqIhd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			
-
-			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/0Yc-6LC3Vnc " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<video src="./Perio 1-v2.mp4" width="100%" height="100%" controls></video>
 			
-
-			<video src="Perio 1-v2.mp4" width="100%" height="100%"></video>
-			-->
-			<video src="./Perio 1-v2.mp4" width="100%" height="100%" controls></video>
-			
+			<img src="" alt="">
 		</div>
 
 	<!-- NavBar -->
@@ -138,8 +97,8 @@
 
 		<!-- 3 types de traitement -->
 
-			<div class="traitements">
-				<h2 class="h2Traitements">Nos traitements</h2>
+			<div class="h1BienvenuePerio">
+				<h1>Bienvenue au cabinet Perio</h1>
 				<p class="texteCentre">
 					<span>L’ équipe Perio est le groupe de parodontistes spécialisés dans la prise en charge des cas complexes de rhéabilitation orale (parodontologie, implantologie et chirurgie orale) à Parie 16e.</span><br/>
 				</p>
@@ -148,6 +107,8 @@
 					<span>Lors de la première consultation, le parodontiste sera à votre écoute pour définir vos objectifs. Il réalisera un examen clinique et radiographique, une analyse du sourire, et si nécessaire un bilan photographique.</span><br/>
 
 				</p>
+
+				<h2 class="h2Traitements">Nos traitements</h2>
 
 				<!-- A ENLEVER
 							<table>
@@ -172,12 +133,12 @@
 	
 <!-- 
 	###############################
-			Accordéon
+			Accordéon V1
 	###############################
 -->
 
 <div class="bgAccordeon">
-	<h2 class="accordionBleuFonce">Maladie Parodontale</h2>
+	<h3 class="accordionBleuFonce" id="MaladieParodontale">Maladie Parodontale</h3>
 	<div class="panel">
 								<!-- Texte explicatif -->
 						<p class="texteBleuFdBlanc">Ces maladies inflammatoires de la gencive, de cause bactérienne, nécessitent un traitement en plusieurs étapes, personnalisé en
@@ -257,13 +218,13 @@
 						</div>
 	</div>
 
-	<h2 class="accordionBleuClair">Implants dentaires</h2>
+	<h3 class="accordionBleuClair" id="ImplantsDentaires">Implants dentaires</h3>
 	<div class="panel">
 		<!-- Texte explicatif -->
 <p class="texteVertFdBlanc">Les implants dentaires sont des racines artificielles en titane permettant de remplacer les dents absentes.</p>
 
 
-<!-- Tbl avec type de traitement Maladies Parodontales -->
+<!-- Tbl avec type de traitement Implants dentaires -->
 <table class="TableWidth100">
 	<tr>
 		<td class="tdBorderTextAlign">
@@ -331,94 +292,296 @@
 
 	</div>
 
-	<h2 class="accordionBleuFonce">Traitements à visée esthétique</h2>
+	<h3 class="accordionBleuFonce" id="TraitementViseeEsthetique">Traitements à visée esthétique</h3>
 	<div class="panel">
 		
+		<!-- Tbl avec type de traitements à visée esthétique -->
+		<table class="TableWidth100">
+			<tr>
+				<td class="tdBorderTextAlign">
 
-<!-- Tbl avec type de traitement Maladies Parodontales -->
-<table class="TableWidth100">
-	<tr>
-		<td class="tdBorderTextAlign">
+					<p id="myBtn">+</p>
+						<div id="myModal" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<p>
+									<strong>Traitement des récessions gingivales</strong><br/>
+									Techniques mini-invasives de greffes de gencive<br/><br/>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+								</p>
+							</div>
+						</div>
 
-			<p id="myBtn">+</p>
-				<div id="myModal" class="modal">
-					<div class="modal-content">
-						<span class="close">&times;</span>
-						<p>
-							<strong>Traitement des récessions gingivales</strong><br/>
-							Techniques mini-invasives de greffes de gencive<br/><br/>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
-						</p>
-					</div>
-				</div>
-
-			<p>
-				<strong>Traitement des récessions gingivales</strong><br/>
-				Techniques mini-invasives de greffes de gencive
-			</p>
-			
-
-		</td>
-
-		<td  class="tdBorderTextAlign">
-			<p>
-				<strong>Gestion du sourire</strong><br/>
-				Alignement des collets dentaires
-			</p>
-		</td>
-	</tr>
-
-
-	<tr>
-		<td class="tdBorderTextAlign">
-			<p>
-				<strong>Correction des défauts autour des implants</strong><br/>
-				Apport de gencive par greffe mini-invasive en cas de déficit
-			</p>
-		</td>
-
-		<td class="tdBorderTextAlign">
-			<p>
-				<strong>Préparation parodontale avant prothèse</strong><br/>
-				Création des conditions optimales pour intégration des prothèses
-			</p>
-
-			<p id="myBtn-2">+</p>
-			<div id="myModal-2" class="modal-2">
-				<div class="modal-content-2">
-					<span class="close-2">&times;</span>
 					<p>
-						<strong>Régénération tissulaire</strong><br/>
-						Reconstruction des défauts engendrés par la maladie<br/><br/>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+						<strong>Traitement des récessions gingivales</strong><br/>
+						Techniques mini-invasives de greffes de gencive
 					</p>
-				</div>
-			</div>
+					
+
+				</td>
+
+				<td  class="tdBorderTextAlign">
+					<p>
+						<strong>Gestion du sourire</strong><br/>
+						Alignement des collets dentaires
+					</p>
+				</td>
+			</tr>
 
 
-		</td>
-	</tr>
-</table>
+			<tr>
+				<td class="tdBorderTextAlign">
+					<p>
+						<strong>Correction des défauts autour des implants</strong><br/>
+						Apport de gencive par greffe mini-invasive en cas de déficit
+					</p>
+				</td>
+
+				<td class="tdBorderTextAlign">
+					<p>
+						<strong>Préparation parodontale avant prothèse</strong><br/>
+						Création des conditions optimales pour intégration des prothèses
+					</p>
+
+					<p id="myBtn-2">+</p>
+					<div id="myModal-2" class="modal-2">
+						<div class="modal-content-2">
+							<span class="close-2">&times;</span>
+							<p>
+								<strong>Régénération tissulaire</strong><br/>
+								Reconstruction des défauts engendrés par la maladie<br/><br/>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+							</p>
+						</div>
+					</div>
+
+
+				</td>
+			</tr>
+		</table>
 
 	</div>
 
-	<h2 class="accordionBleuClair">Reconstruction osseuses pour pose d'implants</h2>
+
+
+	<h3 class="accordionBleuClair" id="ReconstructionOsseuse">Reconstruction osseuses pour pose d'implants</h3>
+	<!-- <h4>en cas de volume osseux insuffisant</h4> -->
 	<div class="panel">
-		<p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+<!-- Tbl avec type de traitements Reconstruction osseuses pour pose d'implants -->
+		<table class="TableWidth100">
+			<tr>
+				<td class="tdBorderTextAlign">
+		
+					<p id="myBtn">+</p>
+						<div id="myModal" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<p>
+									<strong>Régénération osseuse au cours de la pose d'implants</strong><br/>
+									Augmentation osseuse et pose d’implant simultanée<br/><br/>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+								</p>
+							</div>
+						</div>
+		
+					<p class="textVert">
+						<strong>Régénération osseuse au cours de la pose d'implants</strong><br/>
+						Augmentation osseuse et pose d’implant simultanée
+					</p>
+					
+		
+				</td>
+		
+				<td  class="tdBorderTextAlign">
+					<p class="textVert">
+						<strong>Régénération osseuse avant la pose d’implant</strong><br/>
+						Correction des défauts osseux importants pour un résultat esthétique et fonctionnel optimal
+					</p>
+				</td>
+			</tr>
+		
+		
+			<tr>
+				<td class="tdBorderTextAlign">
+					<p class="textVert">
+						<strong>Greffe osseuse</strong><br/>
+						Augmentation osseuse à l’aide de greffons autogènes
+					</p>
+				</td>
+		
+				<td class="tdBorderTextAlign">
+					<p class="textVert">
+						<strong>Greffe de sinus</strong><br/>
+						Augmentation osseuse à l’aide de biomatériaux.<br/>
+						Les biomatériaux utilisés dans le cabinet Perio sont sélectionnés sur la base de leur recul scientifique.
+					</p>
+		
+					<p id="myBtn-2">+</p>
+					<div id="myModal-2" class="modal-2">
+						<div class="modal-content-2">
+							<span class="close-2">&times;</span>
+							<p>
+								<strong>Greffe de sinus</strong><br/>
+								Augmentation osseuse à l’aide de biomatériaux.<br/>
+								Les biomatériaux utilisés dans le cabinet Perio sont sélectionnés sur la base de leur recul scientifique.<br/><br/>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+							</p>
+						</div>
+					</div>
+		
+		
+				</td>
+			</tr>
+		</table>
 	</div>
 
 
-	<h2 class="accordionBleuFonce">Accompagnement des traitements orthodontiques</h2>
+	<h3 class="accordionBleuFonce" id="AccompagnementOrthodontique">Accompagnement des traitements orthodontiques</h3>
+	<!--  <h4>Le cabinet Perio oeuvre avec les orthodontistes au rétablissement de la fonction masticatoire et du sourire</h4> -->
 	<div class="panel">
-		<p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+		<!-- Tbl avec type de traitements à visée esthétique -->
+		<table class="TableWidth100">
+			<tr>
+				<td class="tdBorderTextAlign">
+
+					<p id="myBtn">+</p>
+						<div id="myModal" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<p>
+									<strong>Préparation parodontale avant orthodontie</strong><br/>
+									Traitement des inflammations et renforcement de la gencive (greffes gingivales)<br/><br/>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+								</p>
+							</div>
+						</div>
+
+					<p>
+						<strong>Préparation parodontale avant orthodontie</strong><br/>
+						Traitement des inflammations et renforcement de la gencive (greffes gingivales)
+					</p>
+					
+
+				</td>
+
+				<td  class="tdBorderTextAlign">
+					<p>
+						<strong>Désinclusion de dents incluses</strong><br/>
+						En vue d’une remise en place orthodontique de dents sur l’arcade
+					</p>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td class="tdBorderTextAlign">
+					<p>
+						<strong>Frénectomie</strong><br/>
+						Suppression des brides interf rant avec le traitement orthodontique
+					</p>
+				</td>
+
+				<td class="tdBorderTextAlign">
+					<p>
+						<strong>Minivis d’ancrage orthodontique</strong><br/>
+						Création des conditions optimales pour intégration des prothèses
+					</p>
+
+					<p id="myBtn-2">+</p>
+					<div id="myModal-2" class="modal-2">
+						<div class="modal-content-2">
+							<span class="close-2">&times;</span>
+							<p>
+								<strong>Minivis d’ancrage orthodontique</strong><br/>
+								Pose simple d’ancrages provisoires pour accélérer l’orthodontie<br/><br/>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+							</p>
+						</div>
+					</div>
+
+
+				</td>
+			</tr>
+		</table>
 	</div>
 
-	<h2 class="accordionBleuClair">Exaction des dents incluses</h2>
+	<h3 class="accordionBleuClair" id="ExtractionDent">Exaction des dents incluses</h3>
 	<div class="panel">
-		<p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+		<table class="TableWidth100">
+			<tr>
+				<td class="tdBorderTextAlign">
+					<p class="textVert">
+						<strong>Dents de sagesse</strong><br/>
+						Diagnostic personnalisé sur la nécessité d’extraction et interventions peu invasives
+					</p>
+				</td>
+		
+				<td class="tdBorderTextAlign">
+					<p class="textVert">
+						<strong>Dents surnuméraires</strong><br/>
+						<br/>
+					</p>
+		
+					<p id="myBtn-2">+</p>
+					<div id="myModal-2" class="modal-2">
+						<div class="modal-content-2">
+							<span class="close-2">&times;</span>
+							<p>
+								<strong>Dents surnuméraires</strong><br/>
+								<br/>
+								<br/><br/>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore.<br/>
+							</p>
+						</div>
+					</div>
+		
+		
+				</td>
+			</tr>
+		</table>
 	</div>
 </div>
 
+
+
+
+
+
+
+<!-- 
+	###############################
+			Accordéon V2
+	###############################
+-->
+
+
+<div class="container-accordeon">
+
+
+	<h3 class="accordeon" style="font-size:1.3em">Question 1</h3>
+<div class="panel2">
+  <p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+</div>
+
+<h3 class="accordeon" style="font-size:1.3em">Question 2</h3>
+<div class="panel2">
+  <p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+</div>
+
+<h3 class="accordeon" style="font-size:1.3em">Question 3</h3>
+<div class="panel2">
+  <p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+</div>
+
+<h3 class="accordeon" style="font-size:1.3em">Question 4</h3>
+<div class="panel2">
+  <p style="font-size:1.2em">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/></p>
+</div>
+
+
+
+
+</div>
 
 
 
