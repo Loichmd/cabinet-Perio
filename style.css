@@ -1302,7 +1302,7 @@ title{
 .slideshow-container{
     margin-top:4vw;
     overflow:hidden;
-    min-height:60vmin;
+    min-height:60vh;
     cursor:grab;
     position:relative;
 }
@@ -1322,7 +1322,7 @@ title{
 .slide{
     flex-shrink:0;
     height:100%;
-    width:50vmin;
+    width:40vw;
     background-size: cover;
     background-position: center;
     position:relative;
@@ -1442,7 +1442,7 @@ footer{
 
 
 	.container-circle{
-		height:75vh;
+		height:70vh;
 	}
 
 	.cercle-3{
