@@ -155,26 +155,30 @@ circle2.addEventListener('click', () =>{
 		.staggerTo(messageBienvenueJS, 1 ,{opacity:1, ease:Linear.easeNone}, 0.3)
 		.staggerTo(messageBienvenueJS, 1 ,{opacity:0, ease:Linear.easeNone}, 0.3, '+=3')
 
-
-	
-
 	// On joue TL2 
 	TL2.play();
 
-				
-		
-			
+
+	// On suprime tout ce qu'il y avait dans la première partie pour pouvoir cliquer
+		function RemoveContainerFirst(){
+			containerFirst.remove();
+		}			
+	
+		function TimerRemoveContainerFirst(){
+			setTimeout(RemoveContainerFirst,2000)
+		}
+
+		TimerRemoveContainerFirst(); 
+	
+	
+
 
 		// Suite des animations (video de présentation)
 			function VideoPresentation(){
-				
-				containerFirst.remove(); // On suprime tout ce qu'il y avait dans la première partie pour pouvoir cliquer
 				videoExp.classList.add('visible') // On ajoute la classe "Visible" à la vidéo car elle n'est pas visible au lancement de la page
-				
 
 				// On retirer l'interdiction du scroll
 					window.removeEventListener('scroll', noScroll);
-
 
 				// On fait une animation d'agrandissement de la vidéo 
 					const TL3 = gsap.timeline({pause:true, delay:0.6})
@@ -511,71 +515,6 @@ praticien.forEach(function (path) {
 
 
 
-// Get the modal
-const modal = document.getElementById("myModal");
-const popUp = document.querySelector('.modal')
-const boiteContenu = document.querySelector('.modal-content')
-const btn = document.querySelector("#myBtn");
-const spanClose = document.getElementsByClassName("close")[0];
-
-
-// Premier +
-
-		btn.addEventListener('click',()=>{
-			const TL9 = gsap.timeline({pause:true});
-			TL9
-			.staggerTo(popUp, 1, {display:"block", scale: 1, ease: "power2.out"}, 1)
-			.staggerFrom(boiteContenu, 0.5, {scale:0, ease: "power2.out"}, 0.2, "-=1")
-
-			TL9.play();
-		})
-
-		spanClose.addEventListener('click', ()=>{
-			popUp.style.display = "none";
-		})
-
-		window.addEventListener('click', function(event) {
-
-			if (event.target == modal) {
-				modal.style.display = "none";
-
-				
-			}
-		})
-
-
-
-
-// Deuxième +
-
-
-		const modal2 = document.getElementById("myModal-2");
-		const popUp2 = document.querySelector('.modal-2')
-		const boiteContenu2 = document.querySelector('.modal-content-2')
-		const btn2 = document.querySelector("#myBtn-2");
-		const spanClose2 = document.getElementsByClassName("close-2")[0];
-
-		btn2.addEventListener('click',()=>{
-			const TL9 = gsap.timeline({pause:true});
-			TL9
-			.staggerTo(popUp2, 1, {display:"block", scale: 1, ease: "power2.out"}, 1)
-			.staggerFrom(boiteContenu2, 0.5, {scale:0, ease: "power2.out"}, 0.2, "-=1")
-
-			TL9.play();
-		})
-
-		spanClose2.addEventListener('click', ()=>{
-			popUp2.style.display = "none";
-		})
-
-		window.addEventListener('click', function(event) {
-
-			if (event.target == modal) {
-				modal2.style.display = "none";
-
-				
-			}
-		})
 
 
 /*
@@ -702,3 +641,161 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+
+
+
+/*
+##########################
+		Accordéon
+##########################
+*/
+
+
+
+
+
+  /* 
+    #######################################
+        Accordeon
+    #######################################
+  */
+
+	var accordeon = document.getElementsByClassName("accordion");
+	var i;
+	
+	for (i = 0; i < accordeon.length; i++) {
+		accordeon[i].addEventListener("click", function() {
+			// On ajoute (ou retire) le -
+				this.classList.toggle("toggle-sur-Moins");
+	
+			
+			var textCache = this.nextElementSibling;
+	
+			if (textCache.style.maxHeight) {
+				textCache.style.maxHeight = null;
+			} 
+			else {
+				textCache.style.maxHeight = textCache.scrollHeight + "px";
+			} 
+	  });
+	}
+	
+	
+	
+	  /* 
+		#######################################
+			Pop-Up Modal
+		#######################################
+	  */
+	
+	
+	const modalBtns = document.querySelectorAll('.modal-open');
+	
+	modalBtns.forEach(function(btn){
+		btn.onclick = function(){
+			var modalIdJS = btn.getAttribute('data-modal');
+	
+			document.getElementById(modalIdJS).style.display = "block";
+		};
+	});
+	
+	
+	
+	const closeBtns = document.querySelectorAll('.modal-close');
+	
+	closeBtns.forEach(function(btn){
+		btn.onclick = function(){
+			btn.closest(".modal").style.display = "none"
+		};
+	});
+	
+	
+	const closeBtnsModal = document.querySelectorAll('.modal');
+	
+	closeBtnsModal.forEach(function(btn){
+		btn.onclick = function(){
+			btn.closest(".modal").style.display = "none"
+		};
+	});
+	
+
+
+
+
+
+
+
+	 /* 
+    #######################################
+        Slideshow equipe
+    #######################################
+  */
+
+
+    const slider = document.querySelector('.slideshow-container');
+    let holding = false;
+
+    let firstClickX; // Premier fois où l'on clique sur le slider (undifined)
+    let alreadyLeftScrolled; // Ce qui a déjà été scrollé (undifined)
+
+
+
+    slider.addEventListener('mousedown', e =>{
+
+        holding = true;
+        firstClickX = e.pageX - slider.offsetLeft; 
+        // e.pageX => longueur entre l'endroit où j'ai cliqué et le bord gauche de ma fenetre
+        // slider.offsetLeft => le padding entre le slider et le bord de ma fenetre
+        // Dans notre cas on veut savoir où se situe le clik (sur X) par rapport au bord du slider; du coup on soustrait les 2 valeurs
+
+        alreadyLeftScrolled = slider.scrollLeft;
+        console.log('premier Click ' + firstClickX);
+    })
+
+
+    slider.addEventListener('mousemove', e =>{
+
+        if(!holding) return; // quand holding = false ==> on active pas l'animation
+        const x = e.pageX - slider.offsetLeft; 
+        // Dans ce cas, la variable x va s'actualiser à chaque fois dès que l'on va bouger
+
+        const scrolled = (x - firstClickX);
+        slider.scrollLeft = alreadyLeftScrolled - scrolled;
+    })
+
+
+    slider.addEventListener('mouseup', () =>{
+        holding=false;
+    })
+
+    slider.addEventListener('mouseleave', () =>{
+        holding=false;
+    })
+
+
+
+    // Partie Mobile
+    slider.addEventListener('touchstart', e =>{
+        holding = true;
+        firstClickX = e.targetTouches[0].pageX - slider.offsetLeft;
+
+        alreadyLeftScrolled = slider.scrollLeft;
+    })
+
+    slider.addEventListener('touchend', () =>{
+        holder = false;
+    })
+
+
+    slider.addEventListener("touchmove", e =>{
+        if(!holding) return;
+        const x = e.targetTouches[0].pageX - slider.offsetLeft;
+
+        const scrolled = (x - firstClickX);
+        slider.scrollLeft = alreadyLeftScrolled - scrolled;
+    })
+	
+	
+	
+	

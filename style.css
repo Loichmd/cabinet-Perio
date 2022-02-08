@@ -77,7 +77,7 @@ h3{
 
 .container-logo-accueil{
 	height:20vh;
-	width:100vw;
+	width:100%;
 	display: flex;
 	align-items:center;
 	justify-content: space-between;
@@ -109,7 +109,7 @@ h3{
 
 .container-circle{
 	height:65vh;
-	width:100vw;
+	width:100%;
 	border: 0px solid #fff;
 	display: flex;
 	align-items:center;
@@ -170,7 +170,7 @@ h3{
 
 .container-reseaux{
 	height:15vh;
-	width:100vw;
+	width:100%;
 	border: 0px solid #fff;
 }
 
@@ -207,12 +207,28 @@ h3{
 	visibility: hidden;
 }
 
+
 .messageBienvenueActive{
+	z-index: 1;
+	position:absolute;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	height:100vh;
+	width:100%;
 	opacity:0;
+
 }
+
+
+
+.messageBienvenue h1{
+	color:#fff;
+}
+
+
+
+
 
 
 
@@ -232,6 +248,254 @@ h3{
 .video.visible{
 	visibility: visible;
 }
+
+
+/*
+	###############################
+			Les traitements
+	###############################
+*/
+
+
+		/* 
+			#######################################
+				Blocs Traitements (CSS Grid + FlexBox)
+			#######################################
+		*/
+
+
+		/* Mettre un display grid à tous les bloc */
+		.Maladie-Paro-containers, .Implants-container, .container-Traitement-Visee, .containers-reconstruction-osseuse, .containers-accompagnement-traitements-ortho, .containers-exaction-dents-incluses{
+			width:100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows:auto 1fr auto;
+		}
+
+		/* On met tous les "sous-blocs" en mode flex pour center */
+		.bloc-Maladie-Paro, .Implants-bloc, .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			margin:3px;
+			text-align: center;
+			padding:30px 5px 0px 5px;
+		}
+
+
+		/* BgColor */
+		.bloc-Maladie-Paro:not(:nth-child(1)), .Implants-bloc:not(:nth-child(1)), .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
+			background:#faf9fe;
+		}
+
+		/* 1er bloc */
+		#Maladie-Paro-bloc1, #Maladie-Paro-bloc6{
+			grid-column: span 2;
+		}
+
+
+
+		/* 2eme bloc */
+		.Implants-bloc{
+			color:#008aae;    
+		}
+
+		#Implant-Bloc1{
+			grid-column: span 2;
+		}
+
+
+
+		/* 4eme Bloc */
+		.reconstruction-osseuse-bloc{
+			color:#008aae;
+		}
+
+		/* 6eme bloc */
+		.bloc-exaction-dents-incluses{
+			color:#008aae;
+		}
+
+
+
+
+
+
+
+
+		/* 
+			#######################################
+				Accordeon
+			#######################################
+		*/
+
+
+		p{
+			margin-bottom:0px;
+			padding-bottom:0px;
+		}
+
+		.containers-accordeon{
+			background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
+		}
+
+
+		.accordion {
+			color: #fff;
+			margin: 0px;
+			width: 100%;
+			border: none;
+			text-align: center;
+			outline: none;
+			font-size: 30px;
+			transition: 0.4s;
+			padding:18px 0px;
+		}
+
+
+
+		.accordion:hover {
+		text-decoration: underline;
+		}
+
+		.accordion:after {
+		content: '\002B';
+		color: #fff;
+		font-weight: bold;
+		float: right;
+		margin-right:18px;
+		
+		}
+
+		.toggle-sur-Moins:after {
+		content: "\2212";
+		}
+
+		.textCache {
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
+		text-align:left;
+		}
+
+		.textCache p{
+			padding:10px 60px;
+		}
+
+
+		/* 
+			#######################################
+				Pop-Up Modal 
+			#######################################
+		*/
+
+		.modal-open{
+			padding:5px 10px;
+			background-color: #faf9fe;
+			color:#002a3ab3;
+			border-radius:4px;
+			outline:none;
+			border:none;
+			cursor:pointer;
+		}
+
+
+		.modal{
+			display:none;
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background-color: rgba(0,0,0,0.4);
+			z-index:1;
+		}
+
+		.modal-content{
+			background-color: #fff;
+			margin:15% auto;
+			width:40%;
+			padding:0px 5px;
+			/* padding:8px 25px; */
+			border-radius: 4px;
+			z-index:4;
+			text-align:center;
+			height:200px;
+			max-height:400px;
+			overflow:scroll
+		}
+
+
+		.modal-header{
+			font-weight: 500;
+			padding:10px 0; 
+			font-size:26px;
+		}
+
+
+
+		.material-icons{
+			padding:-10px 0px;
+		}
+
+
+
+		.modal-body{
+			color:#7b7b7b;
+			padding:15px 0;
+		}
+
+
+		.modal-footer{
+			padding:15px 0;
+		}
+
+
+		.modal-close{
+			float:right;
+			font-size:20px;
+			background-color: #fff;
+			border:0;
+			outline:0;
+			padding:0px 5px;
+			border-radius:50%;
+			cursor:pointer;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -311,31 +575,10 @@ h3{
 }
 
 
-/* Video Bienvenue au Cabinet */
+/* Video Bienvenue au Cabinet*/
 
 
-.messageBienvenue h1{
-	color:#fff;
-}
-
-
-.messageBienvenue{
-	visibility: hidden;
-	position:absolute;
-}
-
-
-.messageBienvenueActive{
-	z-index: 1;
-	position:absolute;
-	margin:0 auto;
-	top:40%;
-	align-items: center;
-	display: flex;
-	opacity:0;
-	left:27%;
-}
-
+ 
 
 
 .vert{
@@ -594,7 +837,7 @@ h3{
 
 /* 
 	###############################
-			Implants dentaires
+			Implants dentaires OLD
 	###############################
 */
 
@@ -914,7 +1157,7 @@ title{
 
 /* 
 #######################
-	Pop-UP
+	Pop-UP OLD
 #######################
 */
 
@@ -1048,6 +1291,78 @@ title{
 
 
 
+
+/* 
+#######################
+	Slideshow équipe
+#######################
+*/		
+
+
+.slideshow-container{
+    margin-top:4vw;
+    overflow:hidden;
+    min-height:60vmin;
+    cursor:grab;
+    position:relative;
+}
+
+.slideshow-container:active{
+    cursor:grabbing;
+}
+
+
+.slideshow{
+    position:absolute;
+    height:100%;
+    display:flex;
+    pointer-events:none; 
+}
+
+.slide{
+    flex-shrink:0;
+    height:100%;
+    width:50vmin;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+}
+
+.slide:not(:nth-child(1)){
+    margin-left:10px;
+}
+
+
+.slide p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color:red;
+    height:100%;
+}
+
+
+.s1 {
+    background-image: url("./equipe/2.jpg");
+  }
+  
+  .s2 {
+    background-image: url("./equipe/3.jpg");
+  }
+  
+  .s3 {
+    background-image: url("./equipe/4.jpg");
+  }
+  
+  .s4 {
+    background-image: url("./equipe/5.jpg");
+  }
+  
+  .s5 {
+    background-image: url("./equipe/9.jpg");
+  }
+
+
 /* 
 #######################
 	Footer
@@ -1079,179 +1394,6 @@ footer{
 
 
 
-
-
-
-/*
-##########################
-		Accordéon
-##########################
-
-
-					.bgAccordeon{
-						background-color: #fff;;
-					}
-
-					.active:after {
-						content: "\2212";
-					}
-					
-					.panel {
-						padding: 0 18px;
-						background-color: white;
-						max-height: 0;
-						overflow: hidden;
-						transition: max-height 0.3s ease-out;
-						text-align:left;
-					
-					}
-
-					/* Bleu Clair *//*
-								.accordionBleuClair {
-								/*background-color: #008aae;*//*
-								color: #fff;
-								cursor: pointer;
-								padding: 50px 20px;
-								width: 100%;
-								border: none;
-								text-align: center;
-								outline: none;
-								font-size: 30px;
-								transition: 0.4s;
-								}
-
-								.active, .accordionBleuClair:hover {
-								/*background-color: #F5A623;*//*
-								text-decoration: underline;
-								transition: text-decoration 0.2s ease-out;
-								}
-
-								.accordionBleuClair:after {
-								content: '\002B';
-								color: #fff;
-								font-weight: bold;
-								float: right;
-								}
-
-					/* Bleu Fonce */
-					/*
-								.accordionBleuFonce {
-									/*background-color: #002a3a;*//*
-									color: #fff;
-									cursor: pointer;
-									padding: 50px 20px;
-									width: 100%;
-									border: none;
-									text-align: center;
-									outline: none;
-									font-size: 30px;
-									transition: 0.4s;
-								}
-								
-								.active, .accordionBleuFonce:hover {
-									text-decoration: underline;
-									transition: all .5s ease-in-out;
-								}
-								
-								.accordionBleuFonce:after {
-									content: '\002B';
-									color: #fff;
-									font-weight: bold;
-									float: right;
-								}
-
-
-					#MaladieParodontale{
-						background-color:#002a39 ;
-					}
-
-					#ImplantsDentaires{
-						background-color:#003e53 ;
-					}
-
-					#TraitementViseeEsthetique{
-						background-color:#00546d ;
-					}
-
-
-					#ReconstructionOsseuse{
-						background-color:#016b89 ;
-					}
-
-
-
-					#AccompagnementOrthodontique{
-						background-color:#0084a5 ;
-					}
-
-
-					#ExtractionDent{
-						background-color: #008aae;
-					}
-
-*/
-
-
-
-
-
-
-/*
-##########################
-		Accordéon V2
-##########################
-*/
-
-
-.container-accordeon{
-	background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
-	font-size:30px;
-}
-
-.container-accordeon h3{
-	color:#fff;
-	padding:10px;
-	text-align:center
-}
-
-.accordeon {
-
-	color: #fff;
-	cursor: pointer;
-	padding: 18px;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-	transition: 0.4s;
-  }
-  
-  .active, .accordeon:hover {
-	text-decoration: underline;
-  }
-  
-  .accordeon:after {
-	content: '\002B';
-	color: #fff;
-	font-weight: bold;
-	float: right;
-	margin-left: 5px;
-  }
-  
-  .active:after {
-	content: "\2212";
-  }
-  
-  .panel2 {
-	padding: 0 18px;
-	background-color: white;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.3s ease-out;
-	text-align:left;
-  
-  }
 
 
 
@@ -1304,14 +1446,50 @@ footer{
 	}
 
 	.cercle-3{
-		height:350px;
-		width:350px;
-	}
-
-	.cercle-2{
 		height:300px;
 		width:300px;
 	}
+
+	.cercle-2{
+		height:250px;
+		width:250px;
+	}
+
+	.FontMessageBienvenue{
+		font-family: "SfProDisplayRegular", sans-serif;
+		font-size: 30px !important;
+		color: #fff !important;
+	}
 	
+
+
+	.h1BienvenuePerio{
+		padding: 80px 20px;
+	}
+
+	.texteBleuFdBlanc{
+		padding: 100px 20px;
+	}
+
+	.tdBorderTextAlign, .fdRoseTxtBleu, .texteVertFdBlanc{
+		padding: 60px 10px;
+		vertical-align: top;
+	}
+
+
+	.TxtGris{
+		padding:0px 20px 60px 20px;
+	}
+
 	
+
+	/* texte dans les blocs Traitements */
+	.textCache p{
+		padding: 10px 0px;
+	}
+
+	/* Partie présentant les valeurs du cabinet Perio (en bas de page) */
+	.fondBleu{
+		padding: 50px 20px;
+	}
 }
