@@ -1333,7 +1333,7 @@ title{
 }
 
 
-.slide p{
+.slide{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -1341,10 +1341,25 @@ title{
     height:100%;
 }
 
+.overlay:hover{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background: rgba(0,0,0,0.50);
+}
+
+
+
 
 .s1 {
     background-image: url("./equipe/2.jpg");
   }
+
+.s1:hover{
+	background-image: url("./equipe/6-hover.jpg");
+}
   
   .s2 {
     background-image: url("./equipe/3.jpg");
@@ -1426,34 +1441,48 @@ footer{
 
 @media screen and (max-width:500px){
 
-	.container-logo-accueil{
-		height:10vh;
-	}
 
-	.container-logo-accueil p{
-		font-size:15px;
-	}
+	/* On supprime la possibilité de scroller */
+			html, body{
+				overflow-x:hidden
+			}
+
+			body{
+				position:relative
+			}
+
+	/* Partie accueil */
+
+			container-logo-accueil{
+				height:10vh;
+			}
+
+			.container-logo-accueil p{
+				font-size:10px;
+			}
 
 
-	.logo{
-		height:80px;
-		width:150px;
-	}
+			.logo{
+				height:80px;
+				width:150px;
+			}
 
 
-	.container-circle{
-		height:70vh;
-	}
+			.container-circle{
+				height:60vh;
+			}
 
-	.cercle-3{
-		height:300px;
-		width:300px;
-	}
+			.cercle-3{
+				height:300px;
+				width:300px;
+			}
 
-	.cercle-2{
-		height:250px;
-		width:250px;
-	}
+			.cercle-2{
+				height:250px;
+				width:250px;
+			}
+
+
 
 	.FontMessageBienvenue{
 		font-family: "SfProDisplayRegular", sans-serif;
