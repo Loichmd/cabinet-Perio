@@ -1442,7 +1442,7 @@ footer{
 @media screen and (max-width:500px){
 
 
-	/* On supprime la possibilité de scroller 
+	/* On supprime la possibilité de scroller */
 			html, body{
 				overflow-x:hidden
 			}
@@ -1450,7 +1450,7 @@ footer{
 			body{
 				position:relative
 			}
-	*/
+	
 
 	/* Partie accueil */
 
