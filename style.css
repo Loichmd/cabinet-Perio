@@ -1444,11 +1444,12 @@ footer{
 
 	/* On supprime la possibilité de scroller */
 			html, body{
-				overflow-x:hidden
+				
 			}
 
 			body{
-				position:relative
+				position:relative;
+				overflow-x:hidden;
 			}
 	
 
@@ -1521,5 +1522,10 @@ footer{
 	/* Partie présentant les valeurs du cabinet Perio (en bas de page) */
 	.fondBleu{
 		padding: 50px 20px;
+	}
+
+
+	.slideshow-container{
+		min-height: 40vh;
 	}
 }
