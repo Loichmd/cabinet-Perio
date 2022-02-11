@@ -1448,7 +1448,7 @@ footer{
 			}
 
 			body{
-				position:relative;
+				/* position:relative; */
 			}
 	
 
@@ -1489,7 +1489,7 @@ footer{
 		font-family: "SfProDisplayRegular", sans-serif;
 		font-size: 30px !important;
 		color: #fff !important;
-		background-color:green;
+		background-color:violet;
 
 	}
 	
