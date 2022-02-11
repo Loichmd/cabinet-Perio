@@ -345,51 +345,56 @@ gsap.to(childTraitementsJS3,{
 */
 
 
-
-const paragraphPraticienJS = document.querySelectorAll('.paragraphePraticien p');
-const h3PraticienJS = document.querySelectorAll('.paragraphePraticien h3');
-const imgPraticienJS = document.querySelectorAll('.imgPraticien');
-
-
-console.log(paragraphPraticienJS);
+	/*
+		const paragraphPraticienJS = document.querySelectorAll('.paragraphePraticien p');
+		const h3PraticienJS = document.querySelectorAll('.paragraphePraticien h3');
+		const imgPraticienJS = document.querySelectorAll('.imgPraticien');
 
 
-imgPraticienJS.forEach(element => {
-	element.addEventListener('mouseenter', ()=>{
-		//console.log(this.id);
-		//paragraphPraticienJS.classList.toggle("p-H3-visible")
-		//h3PraticienJS.classList.toggle("p-H3-visible")
-	})
-	
-});
+		console.log(paragraphPraticienJS);
 
+
+		imgPraticienJS.forEach(element => {
+			element.addEventListener('mouseenter', ()=>{
+				//console.log(this.id);
+				//paragraphPraticienJS.classList.toggle("p-H3-visible")
+				//h3PraticienJS.classList.toggle("p-H3-visible")
+			})
+			
+		});
+	*/
 
 /// V2
 
-const jMaletJS = document.querySelector('.jMalet')
-const dNisJSand = document.querySelector('#dNisand')
-const LafontJS = document.querySelector('#Lafont')
-const idJMaletJS = document.querySelector('.jMalet .paragraphePraticien')
 
-const presentationPraticien = document.querySelector('.paragraphePraticien')
+	/*
+		const jMaletJS = document.querySelector('.jMalet')
+		const dNisJSand = document.querySelector('#dNisand')
+		const LafontJS = document.querySelector('#Lafont')
+		const idJMaletJS = document.querySelector('.jMalet .paragraphePraticien')
 
-const presentationMalet = document.querySelector('.paragraphePraticienMalet')
-const presentationNisand = document.querySelector('.paragraphePraticienNisand')
-const presentationLafont = document.querySelector('.paragraphePraticienLafont')
+		const presentationPraticien = document.querySelector('.paragraphePraticien')
 
-
-const largeur = (window.innerWidth)/3; 
-
-	jMaletJS.style.width =largeur;
-	dNisJSand.style.width =largeur;
-	LafontJS.style.width =largeur;
+		const presentationMalet = document.querySelector('.paragraphePraticienMalet')
+		const presentationNisand = document.querySelector('.paragraphePraticienNisand')
+		const presentationLafont = document.querySelector('.paragraphePraticienLafont')
 
 
-	/* 
+		const largeur = (window.innerWidth)/3; 
+
+			jMaletJS.style.width =largeur;
+			dNisJSand.style.width =largeur;
+			LafontJS.style.width =largeur;
+	*/
+
+
+/*	 
 	###########################
 		HOVER DR MALET 
 	###########################	
-	*/
+*/
+	
+		/*
 			jMaletJS.addEventListener("mouseenter", ()=>{
 				let Tlequipe = gsap.timeline({pause:true});
 
@@ -403,7 +408,7 @@ const largeur = (window.innerWidth)/3;
 				Tlequipe
 				.staggerTo(presentationMalet, 0.5, {top:187, opacity: 0, ease: "power2.out"})
 			})
-
+		*/
 
 
 			/*
@@ -413,43 +418,48 @@ const largeur = (window.innerWidth)/3;
 				/*
 					Btn n°1
 				*/
-					const RdMalet1 = document.querySelector('#Malet1')
-					console.log(RdMalet1);
 
-					RdMalet1.addEventListener('mouseenter', ()=>{
-						console.log('hellooo');
-						jMaletJS.classList.remove('jMaletHoverBulle2')
-						jMaletJS.classList.add('jMaletHoverBulle1')
-					})
+					/*
+						const RdMalet1 = document.querySelector('#Malet1')
+						console.log(RdMalet1);
 
-					RdMalet1.addEventListener('mouseleave', ()=>{
-						jMaletJS.classList.remove('jMaletHoverBulle1')
-					})
+						RdMalet1.addEventListener('mouseenter', ()=>{
+							console.log('hellooo');
+							jMaletJS.classList.remove('jMaletHoverBulle2')
+							jMaletJS.classList.add('jMaletHoverBulle1')
+						})
+
+						RdMalet1.addEventListener('mouseleave', ()=>{
+							jMaletJS.classList.remove('jMaletHoverBulle1')
+						})
+					*/
 
 
 				
 				/*
 					Btn n°2
 				*/
-					const RdMalet2 = document.querySelector('#Malet2')
-					const TexteDrMaletJS = document.querySelector('.TexteDrMalet')
-					let Tlequipe = gsap.timeline({pause:true});
-					
-					console.log(RdMalet2);
-
-					RdMalet2.addEventListener('mouseenter', ()=>{
-						jMaletJS.classList.remove('jMaletHoverBulle1')
-						TexteDrMaletJS.style.opacity="1"
-						jMaletJS.classList.add('jMaletHoverBulle2')	
+					/*
+						const RdMalet2 = document.querySelector('#Malet2')
+						const TexteDrMaletJS = document.querySelector('.TexteDrMalet')
+						let Tlequipe = gsap.timeline({pause:true});
 						
-						
-					})
+						console.log(RdMalet2);
+
+						RdMalet2.addEventListener('mouseenter', ()=>{
+							jMaletJS.classList.remove('jMaletHoverBulle1')
+							TexteDrMaletJS.style.opacity="1"
+							jMaletJS.classList.add('jMaletHoverBulle2')	
+							
+							
+						})
 
 
-					RdMalet2.addEventListener('mouseleave', ()=>{
-						jMaletJS.classList.remove('jMaletHoverBulle2')
-						TexteDrMaletJS.style.opacity="0"
-					})
+						RdMalet2.addEventListener('mouseleave', ()=>{
+							jMaletJS.classList.remove('jMaletHoverBulle2')
+							TexteDrMaletJS.style.opacity="0"
+						})
+					*/
 
 
 	/* 
@@ -457,6 +467,8 @@ const largeur = (window.innerWidth)/3;
 		HOVER DR Nisand 
 	###########################	
 	*/
+		
+		/*
 			dNisJSand.addEventListener("mouseenter", ()=>{
 				let Tlequipe = gsap.timeline({pause:true});
 
@@ -470,6 +482,7 @@ const largeur = (window.innerWidth)/3;
 				Tlequipe
 				.staggerTo(presentationNisand, 0.5, {top:-20, opacity: 0, ease: "power2.out"})
 			})
+		*/
 
 
 
@@ -479,21 +492,24 @@ const largeur = (window.innerWidth)/3;
 		HOVER DR Lafont 
 	###########################	
 	*/
-	LafontJS.addEventListener("mouseenter", ()=>{
-		let Tlequipe = gsap.timeline({pause:true});
 
-		Tlequipe
-		.staggerTo(presentationLafont, 1, {top: 0, opacity: 1, ease: "power2.out", backgroundImage:"('./Equipe/6-hover.jpg')"})
-	})
-	
-	LafontJS.addEventListener("mouseleave", ()=>{
-		let Tlequipe = gsap.timeline({pause:true});
+		/*
+			
+			LafontJS.addEventListener("mouseenter", ()=>{
+				let Tlequipe = gsap.timeline({pause:true});
 
-		Tlequipe
-		.staggerTo(presentationLafont, 0.5, {top:-20, opacity: 0, ease: "power2.out"})
-	})
+				Tlequipe
+				.staggerTo(presentationLafont, 1, {top: 0, opacity: 1, ease: "power2.out", backgroundImage:"('./Equipe/6-hover.jpg')"})
+			})
+			
+			LafontJS.addEventListener("mouseleave", ()=>{
+				let Tlequipe = gsap.timeline({pause:true});
 
- 
+				Tlequipe
+				.staggerTo(presentationLafont, 0.5, {top:-20, opacity: 0, ease: "power2.out"})
+			})
+		*/
+		
 
 
 
