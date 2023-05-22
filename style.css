@@ -1181,9 +1181,20 @@ title{
     opacity: 1; /* Afficher le texte au survol */
 }
 
+.drMalet h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drMalet:hover h3 {
+    opacity: 1; /* Afficher le texte au survol */
+}
 
 
-.drNissand{
+
+.drNisand{
     background-image: url("./equipe/dr/Dr_Nisand.JPG");
 	background-size:cover;
 	height:600px;
@@ -1191,18 +1202,30 @@ title{
 
 }
 
-.drNissand:hover {
+.drNisand:hover {
     background-image: url("./equipe/dr/Dr_Nisand_hover.jpg");
 }
 
-.drNissand p {
+.drNisand p {
     opacity: 0; /* Masquer le texte initialement */
 	text-align: center;
 	color:#ffffff;
 	font-size:20px;
 }
 
-.drNissand:hover p {
+.drNisand:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+.drNisand h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drNisand:hover h3 {
     opacity: 1; /* Afficher le texte au survol */
 }
 
@@ -1231,6 +1254,133 @@ title{
 .drlafont:hover p {
     opacity: 1; /* Afficher le texte au survol */
 }
+
+
+.drlafont h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drlafont:hover h3 {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+
+
+.drLeRoch{
+    background-image: url("./equipe/dr/dr_LE_ROCH.jpg");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drLeRoch:hover {
+    background-image: url("./equipe/dr/dr_LE_ROCH_hover.jpg");
+}
+
+.drLeRoch p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drLeRoch:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+.drLeRoch h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drLeRoch:hover h3 {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+
+.drDetzen{
+    background-image: url("./equipe/dr/Dr_DETZEN.jpg");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drDetzen:hover {
+    background-image: url("./equipe/dr/Dr_DETZEN_hover.jpg");
+}
+
+.drDetzen p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drDetzen:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+.drDetzen h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drDetzen:hover h3 {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+
+
+.drDecroos{
+    background-image: url("./equipe/dr/Dr_DECROOS.JPG");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drDecroos:hover {
+    background-image: url("./equipe/dr/Dr_Decroos_hover.jpg");
+}
+
+.drDecroos p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drDecroos:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+.drDecroos h3 {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:32px;
+}
+
+.drDecroos:hover h3 {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
 
 
 
