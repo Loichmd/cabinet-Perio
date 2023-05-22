@@ -21,7 +21,7 @@ body{
 	height: 100vh;
 	overflow-x: hidden;
 	position: relative;
-	cursor:url('./Logo_picto.cur'), pointer;
+	/*cursor:url('./Logo_picto.cur'), pointer;*/
 }
 
 p{
@@ -1155,6 +1155,86 @@ title{
 */
 
 
+
+/* ##### test du 21 Mai 2023 ##### */
+
+.drMalet{
+    background-image: url("./equipe/dr/Dr_Malet.JPG");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drMalet:hover {
+    background-image: url("./equipe/dr/Dr_Malet_hover.jpg");
+}
+
+.drMalet p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drMalet:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+.drNissand{
+    background-image: url("./equipe/dr/Dr_Nisand.JPG");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drNissand:hover {
+    background-image: url("./equipe/dr/Dr_Nisand_hover.jpg");
+}
+
+.drNissand p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drNissand:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+
+.drlafont{
+    background-image: url("./equipe/dr/DR_LAFONT.jpg");
+	background-size:cover;
+	height:600px;
+	width:500px;
+
+}
+
+.drlafont:hover {
+    background-image: url("./equipe/dr/DR_LAFONT_hover.jpg");
+}
+
+.drlafont p {
+    opacity: 0; /* Masquer le texte initialement */
+	text-align: center;
+	color:#ffffff;
+	font-size:20px;
+}
+
+.drlafont:hover p {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+
+
+
 /* 
 #######################
 	Pop-UP OLD
@@ -1354,30 +1434,36 @@ title{
 
 
 .s1 {
-    background-image: url("./equipe/2.jpg");
+    background-image: url("./equipe/assistantes/Dounia.JPG");
   }
-
-.s1:hover{
-	background-image: url("./equipe/6-hover.jpg");
-}
   
   .s2 {
-    background-image: url("./equipe/3.jpg");
+	background-image: url("./equipe/assistantes/Emilie.JPG");
   }
   
   .s3 {
-    background-image: url("./equipe/4.jpg");
+	background-image: url("./equipe/assistantes/Germaine.JPG");
   }
   
   .s4 {
-    background-image: url("./equipe/5.jpg");
+    background-image: url("./equipe/assistantes/Magalie.JPG");
   }
   
   .s5 {
-    background-image: url("./equipe/9.jpg");
+	background-image: url("./equipe/assistantes/Mariana.JPG");
   }
 
+  .s6 {
+	background-image: url("./equipe/assistantes/Marion.jpeg");
+  }
 
+  .s7 {
+	background-image: url("./equipe/assistantes/Valeria.JPG");
+  }
+
+  .s8 {
+	background-image: url("./equipe/assistantes/Yasmine.JPG");
+  }
 /* 
 #######################
 	Footer
