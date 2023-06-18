@@ -1079,7 +1079,7 @@ title{
 /* ##### test du 21 Mai 2023 ##### */
 
 .drMalet{
-    background-image: url("./equipe/dr/Dr_Malet.JPG");
+    background-image: url("./Dr_Malet.JPG");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1087,7 +1087,7 @@ title{
 }
 
 .drMalet:hover {
-    background-image: url("./equipe/dr/Dr_Malet_hover.jpg");
+    background-image: url("./Dr_Malet_hover.jpg");
 }
 
 .drMalet p {
@@ -1115,7 +1115,7 @@ title{
 
 
 .drNisand{
-    background-image: url("./equipe/dr/Dr_Nisand.JPG");
+    background-image: url("./Dr_Nisand.JPG");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1123,7 +1123,7 @@ title{
 }
 
 .drNisand:hover {
-    background-image: url("./equipe/dr/Dr_Nisand_hover.jpg");
+    background-image: url("./Dr_Nisand_hover.jpg");
 }
 
 .drNisand p {
@@ -1153,7 +1153,7 @@ title{
 
 
 .drlafont{
-    background-image: url("./equipe/dr/DR_LAFONT.jpg");
+    background-image: url("./DR_LAFONT.jpg");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1161,7 +1161,7 @@ title{
 }
 
 .drlafont:hover {
-    background-image: url("./equipe/dr/DR_LAFONT_hover.jpg");
+    background-image: url("./DR_LAFONT_hover.jpg");
 }
 
 .drlafont p {
@@ -1192,7 +1192,7 @@ title{
 
 
 .drLeRoch{
-    background-image: url("./equipe/dr/dr_LE_ROCH.jpg");
+    background-image: url("./dr_LE_ROCH.jpg");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1200,7 +1200,7 @@ title{
 }
 
 .drLeRoch:hover {
-    background-image: url("./equipe/dr/dr_LE_ROCH_hover.jpg");
+    background-image: url("./dr_LE_ROCH_hover.jpg");
 }
 
 .drLeRoch p {
@@ -1229,7 +1229,7 @@ title{
 
 
 .drDetzen{
-    background-image: url("./equipe/dr/Dr_DETZEN.jpg");
+    background-image: url("./Dr_DETZEN.jpg");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1237,7 +1237,7 @@ title{
 }
 
 .drDetzen:hover {
-    background-image: url("./equipe/dr/Dr_DETZEN_hover.jpg");
+    background-image: url("./Dr_DETZEN_hover.jpg");
 }
 
 .drDetzen p {
@@ -1267,7 +1267,7 @@ title{
 
 
 .drDecroos{
-    background-image: url("./equipe/dr/Dr_DECROOS.JPG");
+    background-image: url("./Dr_DECROOS.JPG");
 	background-size:cover;
 	height:600px;
 	width:500px;
@@ -1275,7 +1275,7 @@ title{
 }
 
 .drDecroos:hover {
-    background-image: url("./equipe/dr/Dr_Decroos_hover.jpg");
+    background-image: url("./Dr_Decroos_hover.jpg");
 }
 
 .drDecroos p {
@@ -1510,42 +1510,42 @@ title{
 
 
 .s1 {
-    background-image: url("./equipe/assistantes/Dounia.JPG");
+    background-image: url("./Dounia.JPG");
 	width:400px;
   }
   
   .s2 {
-	background-image: url("./equipe/assistantes/Emilie.JPG");
+	background-image: url("./Emilie.JPG");
 	width:400px;
   }
   
   .s3 {
-	background-image: url("./equipe/assistantes/Germaine.JPG");
+	background-image: url("./Germaine.JPG");
 	width:400px;
   }
   
   .s4 {
-    background-image: url("./equipe/assistantes/Magalie.JPG");
+    background-image: url("./Magalie.JPG");
 	width:400px;
   }
   
   .s5 {
-	background-image: url("./equipe/assistantes/Mariana.JPG");
+	background-image: url("./Mariana.JPG");
 	width:400px;
   }
 
   .s6 {
-	background-image: url("./equipe/assistantes/Marion.jpeg");
+	background-image: url("./Marion.jpeg");
 	width:400px;
   }
 
   .s7 {
-	background-image: url("./equipe/assistantes/Valeria.JPG");
+	background-image: url("./Valeria.JPG");
 	width:400px;
   }
 
   .s8 {
-	background-image: url("./equipe/assistantes/Yasmine.JPG");
+	background-image: url("./Yasmine.JPG");
 	width:400px;
   }
 /* 
