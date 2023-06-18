@@ -5,7 +5,7 @@
 }
 
 @font-face {
-	font-family: "SfProDisplayRegular"; src: url("./Font/SFPRODISPLAYREGULAR.OTF");
+	font-family: "SfProDisplayRegular"; src: url("./SFPRODISPLAYREGULAR.OTF");
 	/*
 	font-family: "SfProDisplayBold"; font-weight: bold; src: url("./Font/SFPRODISPLAYBOLD.OTF");
 	font-family: "SfProDisplayItalic"; font-weight: italic ; src: url("./Font/SFPRODISPLAYLIGHTITALIC.OTF");
@@ -726,50 +726,12 @@ h3{
 		}
 
 
-/*
-
-		.childTraitements{
-			padding:70px 20px;
-			text-align:center;
-			vertical-align: top;
-			visibility:visible;
-		}
-
-
-
-
-		.childTraitements:nth-child(1){
-			position: relative;
-			left:-600px;
-			visibility: visible;
-		}
-
-		.childTraitements:nth-child(2){
-			position: relative;
-			bottom: -300px;;
-			visibility: visible;
-		}
-
-
-		.childTraitements:nth-child(3){
-			position: relative;
-			left: 800px;;
-			visibility: visible;
-		}
-
-
-
 
 		.childTraitements p{
 			text-align:center;
 		} 
 
-*/	
 
-
-	/* Traintement - deuxième partie (fond blanc) */
-
-		
 
 
 
@@ -1038,25 +1000,6 @@ title{
 
 
 
-/*
-.paragraphePraticien{
-	opacity: 0; 
-	top:-20;
-	position: relative;
-	visibility: hidden;
-}
-
-.paragraphePraticien p{
-	color:#fff;
-	text-align:center;
-}
-
-
-.paragraphePraticien h3{
-	color:#fff;
-	text-align:center;
-}
-*/
 
 /* Praticien Dr Malet */
 		.paragraphePraticienMalet{
@@ -1075,15 +1018,6 @@ title{
 			color:#fff;
 		}
 
-/*
-		.blackItem{
-			height:80px;
-			width:100%;
-			position:relative;
-			top: 157;
-			background-color: red;
-		}
-*/
 
 /* Praticien Dr Nisand */
 		.paragraphePraticienNisand{
@@ -1139,20 +1073,6 @@ title{
 	visibility: visible !important;
 }
 
-/*
-0%{
-	box-shadow: 0 0 0 0 rgba(0,206, 209, 0.7);
-}
-40%{
-	box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
-}
-80%{
-	box-shadow: 0 0 0 50px rgba(0,206, 209, 0);
-}
-100%{
-	box-shadow: 0 0 0 60px rgba(0,206, 209, 0);
-}
-*/
 
 
 
@@ -1381,7 +1301,13 @@ title{
 }
 
 
-
+.btnDoctolib{
+	background-color: rgb(204, 201, 201);
+	border: solid 1px #fff;
+	margin: 20px 100px 0px 100px;
+	border-radius:10px;
+	padding:3px;
+}
 
 
 
@@ -1585,34 +1511,42 @@ title{
 
 .s1 {
     background-image: url("./equipe/assistantes/Dounia.JPG");
+	width:400px;
   }
   
   .s2 {
 	background-image: url("./equipe/assistantes/Emilie.JPG");
+	width:400px;
   }
   
   .s3 {
 	background-image: url("./equipe/assistantes/Germaine.JPG");
+	width:400px;
   }
   
   .s4 {
     background-image: url("./equipe/assistantes/Magalie.JPG");
+	width:400px;
   }
   
   .s5 {
 	background-image: url("./equipe/assistantes/Mariana.JPG");
+	width:400px;
   }
 
   .s6 {
 	background-image: url("./equipe/assistantes/Marion.jpeg");
+	width:400px;
   }
 
   .s7 {
 	background-image: url("./equipe/assistantes/Valeria.JPG");
+	width:400px;
   }
 
   .s8 {
 	background-image: url("./equipe/assistantes/Yasmine.JPG");
+	width:400px;
   }
 /* 
 #######################
