@@ -6,14 +6,7 @@
 
 @font-face {
 	font-family: "SfProDisplayRegular"; src: url("./SFPRODISPLAYREGULAR.OTF");
-	/*
-	font-family: "SfProDisplayBold"; font-weight: bold; src: url("./Font/SFPRODISPLAYBOLD.OTF");
-	font-family: "SfProDisplayItalic"; font-weight: italic ; src: url("./Font/SFPRODISPLAYLIGHTITALIC.OTF");
-	*/
 }
-
-
-
 
 body{
 	background: #002a3a;
@@ -21,16 +14,12 @@ body{
 	height: 100vh;
 	overflow-x: hidden;
 	position: relative;
-	/*cursor:url('./Logo_picto.cur'), pointer;*/
+	line-height: 25px;
 }
 
 p{
 	color: #002a3a;
 	font-size:18px;
-}
-
-.textVert{
-	color:#008aae;
 }
 
 .texteBlanc{
@@ -41,31 +30,34 @@ p{
 	text-align:center;
 }
 
-
 h1{
 	font-family: "SfProDisplayRegular", sans-serif;
 	font-size: 50px;
 	color: #002a3a;
 	text-align:center;
 	padding:0px 0px 40px 0px;
+	line-height: 45px;
 }
 
 h2{
 	color:#002a3a;
 	font-size:40px;
 	text-align: center;
+	background-color: #fff;
+	padding: 50px 0px;
 }
 
 
 h3{
-	text-decoration: bold;
+	font-weight: bold;
 }
 
 
 .fondBleu{
-	background-color: 002a3a;
+	background-color: #002a3a;
 	padding:80px 120px;
 }
+
 
 
 /* 
@@ -81,7 +73,6 @@ h3{
 	display: flex;
 	align-items:center;
 	justify-content: space-between;
-	border: Opx solid #fff;
 }
 
 .logo{
@@ -93,8 +84,6 @@ h3{
 	width:230px;
 }
 
-
-
 .traductionAccueil{
 	color:#FFF;
 	margin-right:30px;
@@ -105,8 +94,6 @@ h3{
 	text-decoration:underline;
 }
 
-
-
 .container-circle{
 	height:65vh;
 	width:100%;
@@ -116,9 +103,7 @@ h3{
 	justify-content: center;
 }
 
-
-
-.cercle-3{
+.cercle-1{
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -147,9 +132,7 @@ h3{
 		opacity: 1;
 		transform: scale(1.0)
 	}
-
 }
-
 
 
 .circle-2{
@@ -165,7 +148,6 @@ h3{
 .circle-2 p{
 	color:#fff;
 }
-
 
 
 .container-reseaux{
@@ -186,8 +168,6 @@ h3{
 }
 
 
-
-
 /* 
 	###############################
 			Message de Bienvenue
@@ -195,13 +175,11 @@ h3{
 */
 
 
-
 .FontMessageBienvenue{
-	font-family: "SfProDisplayRegular", sans-serif;
-	font-size: 50px !important;
-	color: #fff !important;
-}
+	font-size: 50px;
+	color: #fff;
 
+}
 
 .messageBienvenue{
 	visibility: hidden;
@@ -221,14 +199,77 @@ h3{
 }
 
 
+/*
+	###############################
+			Navbar
+	###############################
+*/
 
-.messageBienvenue h1{
-	color:#fff;
+
+.navbar{
+	position:fixed;
+	width:100%;
+	opacity:0;
+	height: 70px;
+	top:0;
+	left:0;
+	background:transparent;
+}
+
+.navbar img{
+	height: 60px;
+}
+
+.stickyin{
+	background-color: #002a3a;
+	animation: navbaropacityin 0.5s linear;
+	z-index: 1;
+}
+
+@keyframes navbaropacityin {
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+
+
+.stickyout{
+	background:transparent;
+	animation: navbaropacityout 0.5s linear;
+}
+
+@keyframes navbaropacityout {
+	0%{
+		opacity: 1;
+	}
+	
+	100%{
+		opacity: 0;
+	}
 }
 
 
 
+.navbar img{
+	padding: 10px 0px 0px 20px;
+}
 
+
+.traduction{
+	text-align:right;
+	color:#fff;
+	margin: -46px 30px 25px 0;
+	font-size:15px;
+}
+
+.traduction:hover{
+	text-decoration: underline;
+	cursor:pointer;
+}
 
 
 
@@ -245,9 +286,39 @@ h3{
 	z-index:2;
 }
 
+.video_size{
+	width:100%;
+}
+
 .video.visible{
 	visibility: visible;
 }
+
+
+/*
+	###############################
+			Présentation cabinet
+	###############################
+*/
+
+.ContainerBienvenue{
+	padding: 80px 5% 50px;
+	background-color: #fff;
+}
+
+
+.intro{
+	text-align:center;
+	margin-bottom:30px;
+}
+
+
+.TxtGris{
+	color: grey;
+	text-align:center;
+}
+
+
 
 
 /*
@@ -256,1209 +327,189 @@ h3{
 	###############################
 */
 
-
-		/* 
-			#######################################
-				Blocs Traitements (CSS Grid + FlexBox)
-			#######################################
-		*/
-
-
-		/* Mettre un display grid à tous les bloc */
-		.Maladie-Paro-containers, .Implants-container, .container-Traitement-Visee, .containers-reconstruction-osseuse, .containers-accompagnement-traitements-ortho, .containers-exaction-dents-incluses{
-			width:100%;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows:auto 1fr auto;
-		}
-
-		/* On met tous les "sous-blocs" en mode flex pour center */
-		.bloc-Maladie-Paro, .Implants-bloc, .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
-			display: flex;
-			justify-content: center;
-			align-items: flex-start;
-			margin:3px;
-			text-align: center;
-			padding:30px 5px 0px 5px;
-		}
-
-
-		/* BgColor */
-		.bloc-Maladie-Paro:not(:nth-child(1)), .Implants-bloc:not(:nth-child(1)), .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
-			background:#faf9fe;
-		}
-
-		/* 1er bloc */
-		#Maladie-Paro-bloc1, #Maladie-Paro-bloc6{
-			grid-column: span 2;
-		}
-
-
-
-		/* 2eme bloc */
-		.Implants-bloc{
-			color:#008aae;    
-		}
-
-		#Implant-Bloc1{
-			grid-column: span 2;
-		}
-
-
-
-		/* 4eme Bloc */
-		.reconstruction-osseuse-bloc{
-			color:#008aae;
-		}
-
-		/* 6eme bloc */
-		.bloc-exaction-dents-incluses{
-			color:#008aae;
-		}
-
-
-
-
-
-
-
-
-		/* 
-			#######################################
-				Accordeon
-			#######################################
-		*/
-
-
-		p{
-			margin-bottom:0px;
-			padding-bottom:0px;
-		}
-
-		.containers-accordeon{
-			background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
-		}
-
-
-		.accordion {
-			color: #fff;
-			margin: 0px;
-			width: 100%;
-			border: none;
-			text-align: center;
-			outline: none;
-			font-size: 30px;
-			transition: 0.4s;
-			padding:18px 0px;
-		}
-
-
-
-		.accordion:hover {
-		text-decoration: underline;
-		}
-
-		.accordion:after {
-		content: '\002B';
-		color: #fff;
-		font-weight: bold;
-		float: right;
-		margin-right:18px;
-		
-		}
-
-		.toggle-sur-Moins:after {
-		content: "\2212";
-		}
-
-		.textCache {
-		background-color: white;
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.3s ease-out;
-		text-align:left;
-		}
-
-		.textCache p{
-			padding:10px 60px;
-		}
-
-
-		/* 
-			#######################################
-				Pop-Up Modal 
-			#######################################
-		*/
-
-		.modal-open{
-			padding:5px 10px;
-			background-color: #faf9fe;
-			color:#002a3ab3;
-			border-radius:4px;
-			outline:none;
-			border:none;
-			cursor:pointer;
-		}
-
-
-		.modal{
-			display:none;
-			position:fixed;
-			top:0;
-			left:0;
-			right:0;
-			bottom:0;
-			background-color: rgba(0,0,0,0.4);
-			z-index:1;
-		}
-
-		.modal-content{
-			background-color: #fff;
-			margin:15% auto;
-			width:40%;
-			padding:0px 5px;
-			/* padding:8px 25px; */
-			border-radius: 4px;
-			z-index:4;
-			text-align:center;
-			height:200px;
-			max-height:400px;
-			overflow:scroll
-		}
-
-
-		.modal-header{
-			font-weight: 500;
-			padding:10px 0; 
-			font-size:26px;
-		}
-
-
-
-		.material-icons{
-			padding:-10px 0px;
-		}
-
-
-
-		.modal-body{
-			color:#7b7b7b;
-			padding:15px 0;
-		}
-
-
-		.modal-footer{
-			padding:15px 0;
-		}
-
-
-		.modal-close{
-			float:right;
-			font-size:20px;
-			background-color: #fff;
-			border:0;
-			outline:0;
-			padding:0px 5px;
-			border-radius:50%;
-			cursor:pointer;
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Première partie lors de l'entrée  */
-
-
-
-
-
-
-
-
-
-
-
-.titre-debut{
-	font-size: 50px;
-	color: #002a3a;
-	font-family: "SfProDisplayRegular", sans-serif;
-}
-
-
-.titre-debut span{
-	position: relative;
-}
-
-
-.circle{
-	height: 200px;
-	width:200px;
-	border-radius:50%;
-	background: #002a3a;
-	border: solid 2px #33dddd;
-	cursor:pointer;
-	padding: 85px 5px 0px 5px;
-	text-align:center;
-	color:#f1f1f1;
-	z-index:100;
-	margin:0 auto;
-	margin-top: 7%;
-	animation: animate 1.5s linear infinite;
-}
-
-
-.circle:hover{
-	
-	background: #faf9fe;
-	border: solid 2px #33dddd;
-	color:#002a3a;
-
-}
-
-
-@keyframes animate {
-	0%{
-		box-shadow: 0 0 0 0 rgba(0,206, 209, 0.7);
-	}
-	40%{
-		box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
-	}
-	80%{
-		box-shadow: 0 0 0 50px rgba(0,206, 209, 0);
-	}
-	100%{
-		box-shadow: 0 0 0 60px rgba(0,206, 209, 0);
-	}
-
-}
-
-
-/* Video Bienvenue au Cabinet*/
-
-
- 
-
-
-.vert{
-	height: 200px;
-	width:100%;
-	background-color: #002a3a;
-	opacity: 1;
-	}
-
-
-	.welcome-cabinet
-	{
-		font-size:50px;
-		color: #002a3a;
-		text-align:center;
-		padding:80px 30px;
-	}
-
-	.welcome-cabinet span{
-		position:relative;
-		color: #002a3a;
-	}
-
-
-
-
-
-/* Partie 2 */
-
-
-	/* Video */
-
-		.video{
-			width:100%;
-			background:#f1f1f1;
-			visibility: hidden;
-			z-index:2;
-		}
-
-		.video.visible{
-			visibility: visible;
-		}
-
-
-
-
-	/* Header */
-
-	/* Navbar */
-		.navbar{
-			position:fixed;
-			width:100%;
-			opacity:0;
-			height: 70px;
-			top:0;
-			left:0;
-			background:transparent;
-		}
-
-		.stickyin{
-			background-color: #002a3a;
-			animation: navbaropacityin 0.5s linear;
-		}
-
-		@keyframes navbaropacityin {
-			0%{
-				opacity: 0;
-			}
-			
-			100%{
-				opacity: 1;
-			}
-		}
-		
-
-		.stickyout{
-			background:transparent
-		}
-
-		@keyframes navbaropacityout {
-			0%{
-				opacity: 1;
-			}
-			
-			100%{
-				opacity: 0;
-			}
-		}
-
-
-
-		.navbar img{
-			padding: 10px 0px 0px 20px;
-		}
-
-
-		.traduction{
-			text-align:right;
-			color:#fff;
-			margin: -30px 30px 25px 0;
-			font-size:15px;
-		}
-
-		.traduction:hover{
-			text-decoration: underline;
-			cursor:pointer;
-		}
-
-		
-
-
-
-
-
-
-
-
-
-/* Les Traitements */
-
-	/* 3 types de traitement */
-
-
-		.h1BienvenuePerio{
-			width:100%;
-			padding: 80px 200px;
-			background-color: #fff;
-		}
-
-		.h2Traitements{
-			padding: 50px 0px 10px 0px;
-			font-size:20px;
-			visibility: hidden;
-			text-align:center;
-			color:#002a3a;
-		}
-
-
-
-		.traitementFdBlanc{
-			margin-top:0px;
-			padding:50px 0px;
-			color: grey;
-			text-align:center;
-		}
-
-
-
-		.childTraitements p{
-			text-align:center;
-		} 
-
-
-
-
-
-	
-
-
-/* Containers-Maladie-Parondotale */	
-
-	/* Titre */	
-
-		.MaladieParodontale{
-			background-color: #002a3a;
-		}
-
-		.h2Blanc{
-			color:#fff;
-			font-size:40px;
-			text-align: center;
-			padding: 50px 0px;
-		}
-
-
-	/* Texte explicatif */
-
-		.texteBleuFdBlanc{
-			text-align:center;
-			background-color: #fff;
-			padding:100px 150px;
-		}
-
-
-		.texteVertFdBlanc{
-			text-align:center;
-			background-color: #fff;
-			padding:100px 150px;
-			color: #008aae;
-		}
-
-
-
-	/* Tbl avec type de traitement Maladies Parodontales */
-
-		.TableWidth100{
-			width:100%;
-			margin-top:-5px;
-			background-color: #fff;
-		}
-
-		.tdBorderTextAlign{
-			text-align: center;
-			border:2px solid #fff;
-			padding:60px 40px;
-			background-color:#faf9fe;
-		}
-
-		
-		.fdRoseTxtBleu{
-			padding:60px 120px;
-			text-align: center;
-			background-color: #faf9fe ;
-		}
-
-
-
-
-/* 
-	###############################
-			Implants dentaires OLD
-	###############################
-*/
-
-		/* Titre implants dentaires */
-
-		.ImplantsDentaire{
-			background-color: #008aae ;
-		}
-
-
-
-
-
-
-.EquipeAVotreEcoute{
+.containerTraitement{
 	background-color: #fff;
 }
 
-
-.h2Bleu{
-	padding: 60px 80px 20px 80px;
-}
-
-.TxtGris{
-	color: grey;
-	text-align:center;
-	padding: 0px 300px 60px 300px;
+.containers-accordeon{
+	background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,42,58,1) 35%, rgba(51,221,221,1) 100%);
 }
 
 
-/* Equipe */
-	/* SVG */
-
-
-.tailleSVG{
-	height:300px;
-	width:300px;
-	margin:0 auto;
+.accordion {
+	color: #fff;
+	margin: 0px;
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 30px;
+	transition: 0.4s;
+	padding:18px 0px;
 }
 
 
-.dessinSVG{
-border: solid 10px red;
+.textCache {
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	text-align:left;
+}
 
+.textCache p{
+	padding:10px 60px;
 }
 
 
-.dessinSVG:hover{
-	border: solid 10px blue;
-	background-image: url("https://interactive-examples.mdn.mozilla.net/media/examples/lizard.png") ;
-	}
 
-
-
-
-
-
-
-
-/* Partie SVG */
-
-.svg{
+.Maladie-Paro-containers, .Implants-container, .container-Traitement-Visee, .containers-reconstruction-osseuse, .containers-accompagnement-traitements-ortho, .containers-exaction-dents-incluses{
 	width:100%;
-	height: 1000px;
-	margin-left:280px;
-}
-
-#equipe{
-	filter: grayscale(0.8);
-}
-
-#Fond{
-	filter: grayscale(0.8);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:auto 1fr auto;
 }
 
 
-#Nom-5{
-	filter: grayscale(1);
-}
-
-#Nom-5:hover{
-	fill:#002A3A;
-	filter: grayscale(0);
-	cursor:pointer;
-}
-
-
-#Nom-4{
-	filter: grayscale(1);
-}
-
-#Nom-4:hover{
-	fill:#002A3A;
-	filter: grayscale(0);
-	cursor:pointer;
+.bloc-Maladie-Paro, .Implants-bloc, .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin:3px;
+	text-align: center;
+	padding:30px 5px 0px 5px;
 }
 
 
-#Nom-3{
-	filter: grayscale(1);
-}
-
-#Nom-3:hover{
-	fill:#002A3A;
-	filter: grayscale(0);
-	cursor:pointer;
+.bloc-Maladie-Paro:not(:nth-child(1)), .Implants-bloc:not(:nth-child(1)), .Traitement-visee-bloc, .reconstruction-osseuse-bloc, .bloc-accompagnement-traitements-ortho, .bloc-exaction-dents-incluses{
+	background:#faf9fe;
 }
 
 
-#Nom-2{
-	filter: grayscale(1);
-}
-
-#Nom-2:hover{
-	fill:#002A3A;
-	filter: grayscale(0);
-	cursor:pointer;
+#Maladie-Paro-bloc1, #Maladie-Paro-bloc6{
+	grid-column: span 2;
 }
 
 
-#Nom-1{
-	filter: grayscale(1);
+.Implants-bloc{
+	color:#008aae;    
+}
+
+#Implant-Bloc1{
+	grid-column: span 2;
 }
 
 
-#Nom-1:hover{
-	fill:#002A3A;
-	filter: grayscale(0);
-	cursor:pointer;
+.reconstruction-osseuse-bloc{
+	color:#008aae;
+}
+
+.bloc-exaction-dents-incluses{
+	color:#008aae;
+}
+
+.accordion:hover {
+text-decoration: underline;
+}
+
+.accordion:after {
+content: '\002B';
+color: #fff;
+font-weight: bold;
+float: right;
+margin-right:18px;
+
+}
+
+.toggle-sur-Moins:after {
+content: "\2212";
 }
 
 
 
-
-#Nom-5:hover .Nom-5-Span{
-	visibility: visible;
-}
-
-
-title{
-	background-color: black;
-	font-size:18px;
-}
 
 
 /* 
 	###############################
-			Photo praticien individuelle
+			L'équipe
 	###############################
 */
 
 
-.jMalet{
-	/* background-image: url('./Equipe/6.jpg');*/
-	background-image: url('https://raw.githubusercontent.com/Loichmd/cabinet-perio/main/equipe/6.jpg');
-	background-size:cover;
-	height:434px;
-	border:solid 10px #fff;
-	/* width:100%; */
-}
-
-.jMaletHoverBulle1{
-	background-image: url('./Equipe/7.jpg');
-}
-
-.jMaletHoverBulle2{
-	background-image: url('./Equipe/6-hover.jpg');
-}
-
-/*
-#jMalet:hover{
-	background-image: url('./Equipe/6-hover.jpg');
-}
-*/
-
-#dNisand{
-	background-image: url('./Equipe/7.jpg');
-	background-size:cover;
-	height:434px; /* (document.body.clientHeight)/3 */
-	/* width:100%; ((document.body.clientWidth)/3) - 10 */
-}
-
-#dNisand:hover{
-	background-image: url('./Equipe/7-hover.jpg');
-}
-
-#Lafont{
-	background-image: url('./Equipe/9.jpg');
-	background-size:cover;
-	height:434px;
-	/* width:100%; */
-}
-
-#Lafont:hover{
-	background-image: url('./Equipe/9-hover.jpg');
+.ContainerEquipeAVotreEcoute{
+	padding:50px 5% 30px;
+	background-color: #ffffff;
 }
 
 
-
-
-
-/* Praticien Dr Malet */
-		.paragraphePraticienMalet{
-			opacity: 0; 
-			top:187;
-			position: relative;
-			text-align: center;
-			color:#fff;
-			height:80px;
-			width:100%;
-			background: rgb(0,42,58);
-			background: linear-gradient(0deg, rgba(0,42,58,1) 0%, rgba(0,42,58,1) 100%); 
-		}
-
-		.paragraphePraticienMalet p{
-			color:#fff;
-		}
-
-
-/* Praticien Dr Nisand */
-		.paragraphePraticienNisand{
-			opacity: 0; 
-			top:-20;
-			position: relative;
-			text-align: center;
-			color:#fff;
-		}
-
-		.paragraphePraticienNisand p{
-			color:#fff;
-		}
-
-/* Praticien Dr Nisand */
-		.paragraphePraticienLafont{
-			opacity: 0; 
-			top:-20;
-			position: relative;
-			text-align: center;
-			color:#fff;
-		}
-
-		.paragraphePraticienLafont p{
-			color:#fff;
-		}
-
-
-
-		
-
-		.TexteDrMalet{
-			color:#fff;
-			text-align: center;
-			opacity: 0;
-		}
-
-		.TexteDrMalet p{
-			color:#fff;
-		}
-
-		.rondPraticien{
-			height:20px;
-			width:20px;
-			margin:10px;
-			border-radius:50%;
-			background-color: #fff;
-		}
-
-
-
-.p-H3-visible{
-	visibility: visible !important;
+.containerPraticiens {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
-
-
-/* ##### test du 21 Mai 2023 ##### */
-
-.drMalet{
-    background-image: url("./Dr_Malet.JPG");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
+.praticiens {
+  position: relative; 
+  width: 50%;
+  box-sizing: border-box;
 }
 
-.drMalet:hover {
-    background-image: url("./Dr_Malet_hover.jpg");
+.praticiens img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
 }
 
-.drMalet p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
+.praticiens:hover img {
+  opacity: 0.2;
+}
+
+.praticiens:hover::before {
+  opacity: 1;
+}
+
+.praticiens .overlayPraticiens {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+	width:90%;
+}
+
+.praticiens:hover .overlayPraticiens {
+    opacity: 1;
+}
+
+.praticiens .overlayPraticiens h3 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.praticiens .overlayPraticiens p {
+    font-size: 14px;
+    margin-bottom: 20px;
 	color:#ffffff;
-	font-size:20px;
-}
-
-.drMalet:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-.drMalet h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drMalet:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
 }
 
 
-
-.drNisand{
-    background-image: url("./Dr_Nisand.JPG");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
+.overlayPraticiens button{
+	background-color: #899DA6;
+	border-radius: 50px;
+	padding: 5px 20px 7px;
+	border: none;
 }
 
-.drNisand:hover {
-    background-image: url("./Dr_Nisand_hover.jpg");
+.overlayPraticiens button a{
+	color: #fff;
 }
-
-.drNisand p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:20px;
-}
-
-.drNisand:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-.drNisand h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drNisand:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-
-
-.drlafont{
-    background-image: url("./DR_LAFONT.jpg");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
-}
-
-.drlafont:hover {
-    background-image: url("./DR_LAFONT_hover.jpg");
-}
-
-.drlafont p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:20px;
-}
-
-.drlafont:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-.drlafont h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drlafont:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-
-
-
-.drLeRoch{
-    background-image: url("./dr_LE_ROCH.jpg");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
-}
-
-.drLeRoch:hover {
-    background-image: url("./dr_LE_ROCH_hover.jpg");
-}
-
-.drLeRoch p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:20px;
-}
-
-.drLeRoch:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-.drLeRoch h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drLeRoch:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-
-
-.drDetzen{
-    background-image: url("./Dr_DETZEN.jpg");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
-}
-
-.drDetzen:hover {
-    background-image: url("./Dr_DETZEN_hover.jpg");
-}
-
-.drDetzen p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:20px;
-}
-
-.drDetzen:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-.drDetzen h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drDetzen:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-
-
-
-.drDecroos{
-    background-image: url("./Dr_DECROOS.JPG");
-	background-size:cover;
-	height:600px;
-	width:500px;
-
-}
-
-.drDecroos:hover {
-    background-image: url("./Dr_Decroos_hover.jpg");
-}
-
-.drDecroos p {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:20px;
-}
-
-.drDecroos:hover p {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-.drDecroos h3 {
-    opacity: 0; /* Masquer le texte initialement */
-	text-align: center;
-	color:#ffffff;
-	font-size:32px;
-}
-
-.drDecroos:hover h3 {
-    opacity: 1; /* Afficher le texte au survol */
-}
-
-
-.btnDoctolib{
-	background-color: rgb(204, 201, 201);
-	border: solid 1px #fff;
-	margin: 20px 100px 0px 100px;
-	border-radius:10px;
-	padding:3px;
-}
-
-
-
-/* 
-#######################
-	Pop-UP OLD
-#######################
-*/
-
-
-	/* Premiere PopUp */
-		#myBtn{
-			color:#008aae;
-			float:right;
-			cursor: pointer;
-			font-size:13px;
-			border-radius: 50%;
-			border: solid 1px #008aae;
-			height:20px;
-			width:20px;
-			margin-top:-40px;
-			margin-right:-25px;
-		}
-
-		#myBtn:hover{
-			box-shadow: 1px 1px 10px rgba(0,206, 209, 0.7);
-		}
-
-		.modal {
-			display: none; /* Hidden by default */
-			position: fixed; /* Stay in place */
-			z-index: 1; /* Sit on top */
-			padding-top: 20%; /* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: auto; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		}
-		
-		/* Modal Content */
-		.modal-content {
-			background-color: #fff;
-			margin: auto;
-			padding: 20px 80px;
-			border: 1px solid #002a3a;
-			width: 80%;
-		}
-		
-		/* The Close Button */
-		.close {
-			color: 008aae;
-			float: right;
-			font-size: 28px;
-			font-weight: bold;
-			margin-right: -70px;
-			margin-top: -20px;
-		}
-		
-		.close:hover,
-		.close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-
-
-	/* Deuxième PopUp */
-
-		#myBtn-2{
-			color:grey;
-			cursor: pointer;
-			font-size:13px;
-			height:20px;
-			width:20px;
-			margin-top:-40px;
-			margin:15px auto -15px;
-			border-radius: 50%;
-			border: solid 1px grey;
-			/*
-			float:right;
-
-			margin-right:-25px;
-			*/
-		}
-
-		#myBtn-2:hover{
-			/* box-shadow: 1px 1px 10px rgba(0,206, 209, 0.7); */
-		}
-
-		.modal-2 {
-			display: none; /* Hidden by default */
-			position: fixed; /* Stay in place */
-			z-index: 1; /* Sit on top */
-			padding-top: 20%; /* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: auto; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		}
-		
-		/* Modal Content */
-		.modal-content-2 {
-			background-color: #fff;
-			margin: auto;
-			padding: 20px 80px;
-			width: 50%;
-			box-shadow: 0 0 0 30px rgba(0,206, 209, 0);
-		}
-		
-		/* The Close Button */
-		.close-2 {
-			color: 008aae;
-			float: right;
-			font-size: 28px;
-			font-weight: bold;
-			margin-right: -70px;
-			margin-top: -20px;
-		}
-		
-		.close-2:hover,
-		.close-2:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-
-
-
-
-
-
-
-/* 
-#######################
-	Slideshow équipe
-#######################
-*/		
-
 
 .slideshow-container{
     margin-top:4vw;
     overflow:hidden;
-    min-height:60vh;
+    min-height:50vh;
     cursor:grab;
     position:relative;
 }
@@ -1478,7 +529,7 @@ title{
 .slide{
     flex-shrink:0;
     height:100%;
-    width:40vw;
+    width:35%;
     background-size: cover;
     background-position: center;
     position:relative;
@@ -1493,8 +544,8 @@ title{
     display: flex;
     justify-content: center;
     align-content: center;
-    color:red;
     height:100%;
+	width:300px;
 }
 
 .overlay:hover{
@@ -1506,48 +557,41 @@ title{
 	background: rgba(0,0,0,0.50);
 }
 
-
-
-
 .s1 {
     background-image: url("./Dounia.JPG");
-	width:400px;
-  }
+}
   
-  .s2 {
-	background-image: url("./Emilie.JPG");
-	width:400px;
-  }
+.s2 {
+background-image: url("./Emilie.JPG");
+}
   
-  .s3 {
-	background-image: url("./Germaine.JPG");
-	width:400px;
-  }
-  
-  .s4 {
-    background-image: url("./Magalie.JPG");
-	width:400px;
-  }
-  
-  .s5 {
-	background-image: url("./Mariana.JPG");
-	width:400px;
-  }
+.s3 {
+background-image: url("./Germaine.JPG");
+}
 
-  .s6 {
-	background-image: url("./Marion.jpeg");
-	width:400px;
-  }
+.s4 {
+background-image: url("./Magalie.JPG");
+}
 
-  .s7 {
-	background-image: url("./Valeria.JPG");
-	width:400px;
-  }
+.s5 {
+background-image: url("./Mariana.JPG");
+}
 
-  .s8 {
-	background-image: url("./Yasmine.JPG");
-	width:400px;
-  }
+.s6 {
+background-image: url("./Marion.jpeg");
+}
+
+.s7 {
+background-image: url("./Valeria.JPG");
+}
+
+.s8 {
+background-image: url("./Yasmine.JPG");
+}
+
+
+
+
 /* 
 #######################
 	Footer
@@ -1561,24 +605,49 @@ footer{
 }
 
 
-
-
-/* 
-#######################
-	Personnalisation de l'info bulle dnas le SVG
-#######################
-*/
-
-.tippy-box {
-	background-color: #002a3a !important;
+footer{
+	color:#fff;
+	margin: 50px 0px 50px 0px;
 }
 
-.tippy-arrow {
-	background-color: #002a3a !important;
+.container-wrapperFooter {
+  display: flex;
+  justify-content: center;
+  margin-bottom:5px;
+}
+
+.rsFooter{
+	padding:0 5px 0px 5px;
+}
+
+.containerFooterInfos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elementFooterInfos {
+  padding: 30px 20px 0px 20px;
+  box-sizing: border-box;
+  color:#fff;
+  text-align:center;
+}
+
+.grasFooter{
+	font-weight: bold;
+}
+
+.texteHeureOuvertureFooter{
+	color:#fff;
+	text-align:center;
 }
 
 
-
+.textCopyright{
+	color:#fff;
+	font-size: 12px;
+	margin: 30px 0px;
+	text-align: center;
+}
 
 
 
@@ -1590,8 +659,11 @@ footer{
 	#################################
 */
 
-
-/* A partie de 900 de large */
+@media only screen and (min-width: 768px) {
+	.praticiens {
+	  width: 33.33%;
+	}
+}
 
 @media screen and (max-width:900px){
 	.container-logo-accueil{
@@ -1603,99 +675,149 @@ footer{
 		width:180px;
 		padding-left:0px;
 	}
+	
 }
 
 
-
-
-
-@media screen and (max-width:500px){
-
-
-	/* On supprime la possibilité de scroller */
-			html, body{
-				overflow-x:hidden;
-			}
-
-			body{
-				/* position:relative; */
-			}
-	
-
-	/* Partie accueil */
-
-			container-logo-accueil{
-				height:10vh;
-			}
-
-			.container-logo-accueil p{
-				font-size:10px;
-			}
-
-
-			.logo{
-				height:80px;
-				width:150px;
-			}
-
-
-			.container-circle{
-				height:60vh;
-			}
-
-			.cercle-3{
-				height:300px;
-				width:300px;
-			}
-
-			.cercle-2{
-				height:250px;
-				width:250px;
-			}
-
-
+@media (max-width: 768px) {
+	p{
+		font-size:16px;
+	}
 
 	.FontMessageBienvenue{
 		font-family: "SfProDisplayRegular", sans-serif;
-		font-size: 30px !important;
-		color: #fff !important;
-
-	}
-	
-
-
-	.h1BienvenuePerio{
-		padding: 80px 20px;
+		font-size: 40px;
+		text-align:center;
 	}
 
-	.texteBleuFdBlanc{
-		padding: 100px 20px;
+	.accordion{
+		font-size:20px;
 	}
+
+	.bloc-exaction-dents-incluses p{
+		font-size: 15px;
+	}
+
+	.praticiens:hover img {
+		opacity: 0.99;
+	  }
+
+	.praticiens .overlayPraticiens {
+		position: relative;
+		transform: none;
+		color: #fff;
+		opacity: 1;
+		transition: none;
+		width: 100%;
+		top:0;
+		left:0;	
+		padding:10px 0px 30px;
+	}
+
+	.praticiens .overlayPraticiens h3{
+		font-size: 25px;
+		margin-bottom:0px;
+	}
+
+	.praticiens .overlayPraticiens p{
+		margin-bottom: 15px;
+	}
+
+
+	.overlayPraticiens p{
+		line-height: 18px;
+	}
+
+	.slide{
+		width:213%;
+	}
+
+	.slideshow-container{
+		min-height:30vh;
+	}
+
+	.elementFooterInfos {
+		width: 100%; 
+		padding: 5px 20px 0px 20px;
+		font-size: 15px;
+	  }
+  
+	  .containerFooterInfos{
+		  margin-top: 30px;
+	  }
+  
+	  .texteHeureOuvertureFooter{
+		  font-size:15px
+	  }
+  }
+  
+
+@media screen and (max-width:500px){
+	.container-logo-accueil p{
+		font-size:10px;
+	}
+
+	.logo{
+		height:80px;
+		width:150px;
+	}
+
+	.container-circle{
+		height:60vh;
+	}
+
+	.cercle-1{
+		height:230px;
+		width:230px;
+	}
+
+	.circle-2{
+		height:200px;
+		width:200px;
+	}
+
+	.FontMessageBienvenue{
+		font-size: 30px;
+		line-height: 30px;
+	}
+
 
 	.tdBorderTextAlign, .fdRoseTxtBleu, .texteVertFdBlanc{
 		padding: 60px 10px;
 		vertical-align: top;
 	}
-
-
-	.TxtGris{
-		padding:0px 20px 60px 20px;
-	}
-
 	
-
-	/* texte dans les blocs Traitements */
 	.textCache p{
 		padding: 10px 0px;
 	}
 
-	/* Partie présentant les valeurs du cabinet Perio (en bas de page) */
-	.fondBleu{
-		padding: 50px 20px;
-	}
-
-
 	.slideshow-container{
 		min-height: 40vh;
+	}
+
+	.ContainerValeur{
+		padding: 0px 20px 50px 20px;
+	}
+
+	.elementFooterInfos {
+	  width: 100%; 
+	  padding: 5px 20px 0px 20px;
+	  font-size: 15px;
+	}
+
+	.containerFooterInfos{
+		margin-top: 30px;
+	}
+
+	.texteHeureOuvertureFooter{
+		font-size:15px
+	}
+
+}
+ 
+@media only screen and (max-width: 470px) {
+	.overlayPraticiens button{
+		line-height: 14px;
+		margin: 0px 10px;
 	}
 }
