@@ -632,6 +632,10 @@ footer{
   text-align:center;
 }
 
+.containerFooterInfos .elementFooterInfos:nth-child(2) {
+  color: white;
+}
+
 .grasFooter{
 	font-weight: bold;
 }
